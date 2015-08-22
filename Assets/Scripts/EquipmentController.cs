@@ -36,6 +36,7 @@ public class EquipmentController : MonoBehaviour {
 
         equipedGearMain = gear;
         equipedGearMain.transform.parent = this.transform;
+        equipedGearMain.transform.forward = this.transform.forward;
         equipedGearMain.transform.localPosition = equipedGearMain.GetComponent<WeaponController>().positionOffSet;
     }
 

@@ -15,6 +15,5 @@ public class WeaponSphere : WeaponController {
     {
         GameObject firedShot = Instantiate(this.projectile);
         firedShot.GetComponent<ProjectileController>().Initialize(this.gameObject);
-        Debug.Log("This is a sphere.. you cannot shoot with it.");
     }
 }

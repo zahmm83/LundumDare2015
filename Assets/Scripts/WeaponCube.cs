@@ -15,6 +15,5 @@ public class WeaponCube : WeaponController {
     {
         GameObject firedShot = Instantiate(this.projectile);
         firedShot.GetComponent<ProjectileController>().Initialize(this.gameObject);
-        Debug.Log("This is a cube.. I guess you could throw it but it won't fire.");
     }
 }
