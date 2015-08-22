@@ -41,7 +41,6 @@ public class ProjectileController : MonoBehaviour {
 
     public virtual void HandleCollision(Collision hit)
     {
-        hit.
         Debug.Log(hit);
     }
 
