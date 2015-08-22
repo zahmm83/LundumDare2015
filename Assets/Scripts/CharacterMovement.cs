@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour
     public float rotationClamp = 90;
     public float jumpHeight = 20;
     public float maxVelocityChange = 5;
-    private Transform playerCamera;
+    public Transform playerCamera;
     private Rigidbody playerRigidbody;
     private bool grounded = false;
     private float xPos;
@@ -18,7 +18,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-        playerCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        playerCamera = transform.GetChild(0).transform;
         playerRigidbody = GetComponent<Rigidbody>();
     }
 
@@ -51,7 +51,5 @@ public class CharacterMovement : MonoBehaviour
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = 0;
         playerRigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
-
-
     }
 }
