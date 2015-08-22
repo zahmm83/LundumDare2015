@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class ProjectileController : MonoBehaviour {
 
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
-    protected float speed = 1.0f;
+    protected float speed = 15.0f;
+    protected float force = 200.0f;
 
     // Trajectory control variables
     protected Vector3 startingPosition = Vector3.zero; // regular coordinates
@@ -41,7 +42,12 @@ public class ProjectileController : MonoBehaviour {
 
     public virtual void HandleCollision(Collision hit)
     {
-        //Debug.Log(hit);
+        Rigidbody target = hit.collider.GetComponent<Rigidbody>();
+        if (target != null)
+        {
+            target.AddForce(this.direction * this.force, ForceMode.Force);
+            Destroy(this.gameObject);
+        }
     }
 
     // Default move behaviour, follow the trajectory as mapped out by the trajectory control.

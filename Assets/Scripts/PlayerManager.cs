@@ -24,6 +24,6 @@ public class PlayerManager : NetworkBehaviour
             for (int i = 0; i < weaponSpawners.Length; i++)
             {
                 weaponSpawners[i].GetComponent<PickupPedestal>().SpawnConnectedGearClient();
-            }
+        }
 	}
 }
