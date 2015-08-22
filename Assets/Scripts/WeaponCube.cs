@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
 public class WeaponCube : WeaponController {
@@ -14,5 +15,12 @@ public class WeaponCube : WeaponController {
     {
         GameObject firedShot = Instantiate(this.projectile);
         firedShot.GetComponent<ProjectileController>().Initialize(this.gameObject);
+        //CmdSpawnProjectileNetwork();
+    }
+
+    [Command]
+    void CmdSpawnProjectileNetwork()
+    {
+
     }
 }

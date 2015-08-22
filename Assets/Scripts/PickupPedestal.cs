@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections.Generic;
 
-public class PickupPedestal : MonoBehaviour {
-
+public class PickupPedestal : NetworkBehaviour {
+    [SyncVar(hook = "SpawnNewGear")]
+    public int indexConnectedGear;
     public GameObject connectedGear;
     public List<GameObject> potentialGear;
     public float respawnTime = 2.0f;
@@ -17,6 +19,7 @@ public class PickupPedestal : MonoBehaviour {
 	void Update () {
         if(connectedGear == null)
         {
+
             timer += Time.deltaTime;
         } 
 
@@ -44,13 +47,40 @@ public class PickupPedestal : MonoBehaviour {
 
     void SpawnGear()
     {
-        int randomIndex = Random.Range(0, potentialGear.Count);
-        GameObject instantiatedGear = Instantiate(potentialGear[randomIndex]);
-        instantiatedGear.transform.Rotate(Vector3.right * -30, Space.World);
-        //instantiatedGear.transform.parent = this.transform;
-        instantiatedGear.transform.position = this.transform.position + gearRelativePosition;
-        //instantiatedGear.transform.localEulerAngles = gearRelativeAngles;
-        connectedGear = instantiatedGear;
+        if (isServer)
+        {
+            int randomIndex = Random.Range(0, potentialGear.Count);
+            indexConnectedGear = randomIndex;
+
+            CmdGetConnectedGear(indexConnectedGear);
+        }
     }
 
+    [Command]
+    void CmdGetConnectedGear(int index)
+    {
+        indexConnectedGear = index;
+        //NetworkServer.Spawn(connectedGear);
+    }
+
+
+    public void SpawnConnectedGearClient()
+    {
+        if (connectedGear != null)
+        {
+            Destroy(connectedGear);
+        }
+        connectedGear = Instantiate(potentialGear[indexConnectedGear], transform.position + gearRelativePosition, Quaternion.identity) as GameObject;
+        connectedGear.transform.Rotate(Vector3.right * -30, Space.World);
+    }
+
+    public void SpawnNewGear(int indexConnectedGear)
+    {
+        if (connectedGear != null)
+        {
+            Destroy(connectedGear);
+        }
+        connectedGear = Instantiate(potentialGear[indexConnectedGear], transform.position + gearRelativePosition, Quaternion.identity) as GameObject;
+        connectedGear.transform.Rotate(Vector3.right * -30, Space.World);
+    }
 }
