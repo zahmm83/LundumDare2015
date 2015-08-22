@@ -20,7 +20,7 @@ public class EquipmentController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0) && equipedGearMain != null)
+        if (equipedGearMain != null && Input.GetMouseButtonDown(0))
         {
             WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();
             mainWeapon.FireWeapon(this.gameObject);

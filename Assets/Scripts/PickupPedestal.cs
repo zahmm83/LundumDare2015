@@ -7,9 +7,9 @@ public class PickupPedestal : MonoBehaviour {
     public List<GameObject> potentialGear;
     public float respawnTime = 2.0f;
     float timer = 0.0f;
-    Vector3 gearRelativePosition = new Vector3(0.0f, 5.0f, 0.0f);
-    
-	void Start () {
+    Vector3 gearRelativePosition = new Vector3(0.0f, 1.0f, 0.0f);
+
+    void Start () {
         SpawnGear();
     }
 	
@@ -18,12 +18,17 @@ public class PickupPedestal : MonoBehaviour {
         if(connectedGear == null)
         {
             timer += Time.deltaTime;
-        }
+        } 
 
         if(timer > respawnTime)
         {
             timer = 0.0f;
             SpawnGear();
+        }
+
+        if(connectedGear != null)
+        {
+            connectedGear.transform.Rotate(Vector3.up * Time.deltaTime * 10, Space.World);
         }
 	}
 
@@ -41,8 +46,10 @@ public class PickupPedestal : MonoBehaviour {
     {
         int randomIndex = Random.Range(0, potentialGear.Count);
         GameObject instantiatedGear = Instantiate(potentialGear[randomIndex]);
-        instantiatedGear.transform.parent = this.transform;
-        instantiatedGear.transform.localPosition = gearRelativePosition;
+        instantiatedGear.transform.Rotate(Vector3.right * -30, Space.World);
+        //instantiatedGear.transform.parent = this.transform;
+        instantiatedGear.transform.position = this.transform.position + gearRelativePosition;
+        //instantiatedGear.transform.localEulerAngles = gearRelativeAngles;
         connectedGear = instantiatedGear;
     }
 

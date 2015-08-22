@@ -6,11 +6,9 @@ public class ProjectileSphere : ProjectileController
 
 	// Use this for initialization
 	void Awake () {
-        this.speed = 1.0f;
-	}
+        this.speed = 5.0f;
+        this.relativeMidpoint = new Vector3(8.0f, 8.0f, 12.0f);
+        this.relativeEndpoint = new Vector3(20.0f, 4.0f, 6.0f);
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        this.transform.position += (this.direction * this.speed);
-	}
 }

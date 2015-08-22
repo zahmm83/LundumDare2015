@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponCube : WeaponController {
+public class WeaponGrenade : WeaponController {
 
-
-	void Awake ()
+    void Awake()
     {
-        this.positionOffSet = new Vector3(0.6f, 0.3f, 0.25f);
+        this.positionOffSet = new Vector3(0.6f, 0.22f, 0.5f);
     }
-	
 
     public override void FireWeapon(GameObject shooter)
     {
