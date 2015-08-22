@@ -16,6 +16,14 @@ public class PlayerManager : NetworkBehaviour
             playerCamera.GetComponent<AudioListener>().enabled = true;
 
             player.GetComponent<CharacterMovement>().enabled = true;
+            player.GetComponent<EquipmentController>().enabled = true;
         }
+
+
+            GameObject[] weaponSpawners = GameObject.FindGameObjectsWithTag("WeaponSpawner");
+            for (int i = 0; i < weaponSpawners.Length; i++)
+            {
+                weaponSpawners[i].GetComponent<PickupPedestal>().SpawnConnectedGearClient();
+            }
 	}
 }

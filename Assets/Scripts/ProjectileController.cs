@@ -41,7 +41,7 @@ public class ProjectileController : MonoBehaviour {
 
     public virtual void HandleCollision(Collision hit)
     {
-        Debug.Log(hit);
+        //Debug.Log(hit);
     }
 
     // Default move behaviour, follow the trajectory as mapped out by the trajectory control.
