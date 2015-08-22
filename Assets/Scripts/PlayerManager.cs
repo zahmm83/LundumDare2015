@@ -6,6 +6,7 @@ public class PlayerManager : NetworkBehaviour
 {
     [SerializeField]
     private GameObject player;
+    public bool isLocal = false;
 
 	void Start ()
     {
@@ -17,6 +18,7 @@ public class PlayerManager : NetworkBehaviour
 
             player.GetComponent<CharacterMovement>().enabled = true;
             player.GetComponent<EquipmentController>().enabled = true;
+            isLocal = true;
         }
         
         GameObject[] weaponSpawners = GameObject.FindGameObjectsWithTag("WeaponSpawner");

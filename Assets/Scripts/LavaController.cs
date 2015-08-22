@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class LavaController : MonoBehaviour {
+public class LavaController : NetworkBehaviour {
 
     int damage = 20;
 
@@ -19,9 +20,21 @@ public class LavaController : MonoBehaviour {
     {
         if (hit.collider.tag == "Player")
         {
-            hit.collider.GetComponent<StatsController>().TakeDamage(damage);
-            Debug.Log("You sir are stepping in lava..");
+            if (isLocalPlayer)
+            {
+                string playerUniqueId = hit.transform.name;
+                CmdTellServerWhoTookDamage(playerUniqueId, damage);
+            }
+            //hit.collider.GetComponent<StatsController>().TakeDamage(damage);
+            //Debug.Log("You sir are stepping in lava..");
         }
+    }
+
+    [Command]
+    void CmdTellServerWhoTookDamage (string uniqueId, int damage)
+    {
+        GameObject player = GameObject.Find(uniqueId);
+        player.GetComponent<StatsController>().TakeDamage(damage);
     }
 
 }

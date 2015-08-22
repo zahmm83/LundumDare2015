@@ -5,20 +5,29 @@ using UnityEngine.UI;
 
 public class StatsController : NetworkBehaviour {
 
-    [SyncVar]
+    [SyncVar (hook = "OnHealthChange")]
     public int health = 500;
     Text healthText;
 
-	// Use this for initialization
+    //private bool shouldDie = false;
+    //public bool isDead = false;
+
+    //public delegate void DieDelegate();
+    //public event DieDelegate EventDie;
+    
+
 	void Start () {
         this.healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void OnHealthChange(int health)
+    {
+        this.health = health;
+        SetHealthText();
+    }
+
 
     void SetHealthText()
     {
@@ -31,12 +40,12 @@ public class StatsController : NetworkBehaviour {
     public void TakeDamage(int damage)
     {
         this.health -= damage;
-        SetHealthText();
+        //SetHealthText();
 
-        if (this.health <= 0)
-        {
-            CmdTellServerYouDied(this.gameObject);
-        }
+        //if (this.health <= 0)
+        //{
+        //    CmdTellServerYouDied(this.gameObject);
+        //}
     }
 
     public void PlayerDied()
