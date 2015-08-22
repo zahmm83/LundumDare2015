@@ -4,68 +4,52 @@ using System.Collections;
 public class CharacterMovement : MonoBehaviour
 {
     public float moveForce = 50;
-    public float maxSpeed = 5;
-    public LayerMask worldLayer;
+    public float speed = 5;
     public float sensitivity = 5;
     public float rotationClamp = 90;
     public float jumpHeight = 20;
-    private Camera playerCamera;
+    public float maxVelocityChange = 5;
+    public Transform playerCamera;
     private Rigidbody playerRigidbody;
-    private float rotationY = 0;
-    private float rotationX = 0;
     private bool grounded = false;
+    private float xPos;
+    private float yPos;
+    private Vector3 targetVelocity;
 
     void Start()
     {
-        playerCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        playerCamera = transform.GetChild(0).transform;
         playerRigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
+        yPos = Mathf.Clamp(yPos - Input.GetAxis("Mouse Y") * sensitivity, -rotationClamp, rotationClamp);
+        xPos = xPos + Input.GetAxis("Mouse X") * sensitivity;
 
-        rotationY += Input.GetAxis("Mouse Y") * sensitivity;
-        rotationY = Mathf.Clamp(rotationY, -rotationClamp, rotationClamp);
+        gameObject.transform.localRotation = Quaternion.AngleAxis(xPos, Vector3.up);
+        playerCamera.localRotation = Quaternion.AngleAxis(yPos, Vector3.right);
 
-        playerCamera.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
-        transform.localEulerAngles = new Vector3(0, rotationX, 0);
-
-        if (Physics.Raycast(transform.position, -transform.up, 1.5f))
-        {
+        if (Physics.Raycast(transform.position, -transform.up, 1.125f))
             grounded = true;
-        }
         else
-        {
             grounded = false;
-        }
 
-        if (Input.GetKeyDown("space") && grounded)
-        {
+        if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
-        }
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKey("w"))
-        {
-            playerRigidbody.AddForce(moveForce * transform.forward);
-        }
-        else if (Input.GetKey("s"))
-        {
-            playerRigidbody.AddForce(moveForce * -transform.forward);
-        }
+        targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        targetVelocity = transform.TransformDirection(targetVelocity);
+        targetVelocity *= speed;
 
-        if (Input.GetKey("d"))
-        {
-            playerRigidbody.AddForce(moveForce * transform.right);
-        }
-        else if (Input.GetKey("a"))
-        {
-            playerRigidbody.AddForce(moveForce * -transform.right);
-        }
-
-        playerRigidbody.velocity = Vector3.ClampMagnitude(playerRigidbody.velocity, maxSpeed);
+        Vector3 velocity = playerRigidbody.velocity;
+        Vector3 velocityChange = (targetVelocity - velocity);
+        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+        velocityChange.y = 0;
+        playerRigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
     }
 }
