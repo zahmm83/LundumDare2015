@@ -37,9 +37,14 @@ public class StatsController : NetworkBehaviour {
         }
     }
 
-    public void TakeDamage(int damage)
+    public void InformServerAboutDamage(int damage)
     {
-        this.health -= damage;
+        //this.health -= damage;
+        if (isLocalPlayer)
+        {
+            CmdTellServerYouTookDamage(this.name, damage);
+        }
+
         //SetHealthText();
 
         //if (this.health <= 0)
@@ -48,15 +53,21 @@ public class StatsController : NetworkBehaviour {
         //}
     }
 
+    void TakeDamage(int damage)
+    {
+        this.health -= damage;
+    }
+
     public void PlayerDied()
     {
         Debug.Log("Hey now, you're supposed to be dead... stop running around.");
     }
 
     [Command]
-    void CmdTellServerYouDied(GameObject player)
+    void CmdTellServerYouTookDamage(string uniqueId, int damage)
     {
-        
+        GameObject player = GameObject.Find(uniqueId);
+        player.GetComponent<StatsController>().TakeDamage(damage);
     }
 
 }
