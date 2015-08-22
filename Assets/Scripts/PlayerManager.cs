@@ -24,7 +24,11 @@ public class PlayerManager : NetworkBehaviour
         GameObject[] weaponSpawners = GameObject.FindGameObjectsWithTag("WeaponSpawner");
         for (int i = 0; i < weaponSpawners.Length; i++)
         {
-            weaponSpawners[i].GetComponent<PickupPedestal>().SpawnConnectedGearClient();
+            PickupPedestal pedestal = weaponSpawners[i].GetComponent<PickupPedestal>();
+            if(pedestal != null)
+            {
+                pedestal.SpawnConnectedGearClient();
+            }
         }
 	}
 }

@@ -21,7 +21,7 @@ public class CharacterId : NetworkBehaviour {
 	
     void Update()
     {
-        if (myTransform.name == "" || myTransform.name == "Player(Clone)")
+        if (myTransform.name == "" || myTransform.name == "Player_Triceratops(Clone)")
         {
             SetIdentity();
         }
