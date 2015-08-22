@@ -18,7 +18,6 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-        playerCamera = transform.GetChild(0).transform;
         playerRigidbody = GetComponent<Rigidbody>();
     }
 

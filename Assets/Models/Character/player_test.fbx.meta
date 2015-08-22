@@ -10,14 +10,25 @@ ModelImporter:
     100004: //RootNode
     100006: spawn_marker
     100008: world_root
+    100010: body
+    100012: b_chest
+    100014: b_r_grip
+    100016: b_r_grip_null
     400000: b_cog
     400002: b_l_grip
     400004: //RootNode
     400006: spawn_marker
     400008: world_root
+    400010: body
+    400012: b_chest
+    400014: b_r_grip
+    400016: b_r_grip_null
     2300000: spawn_marker
+    2300002: body
     3300000: spawn_marker
+    3300002: body
     4300000: spawn_marker
+    4300002: body
     9500000: //RootNode
   materials:
     importMaterials: 1

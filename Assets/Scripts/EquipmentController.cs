@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using ObjectMarkup;
+
 public class EquipmentController : MonoBehaviour {
 
     public GameObject startingGearMain;
@@ -34,11 +36,18 @@ public class EquipmentController : MonoBehaviour {
             Destroy(equipedGearMain);
         }
 
+        var marker_list = transform.root.GetComponentsInChildren<Marker>();
+        Marker grip = null;
+        foreach(var marker in marker_list)
+        {
+            if(marker.BoneType == "right_grip") { grip = marker; }
+        }
+
+        Marker grip_attach = gear.GetComponentInChildren<Marker>();
+
         equipedGearMain = gear;
-        equipedGearMain.transform.parent = this.transform;
-        equipedGearMain.transform.forward = this.transform.forward;
-        equipedGearMain.transform.localPosition = equipedGearMain.GetComponent<WeaponController>().positionOffSet;
+        equipedGearMain.transform.parent = grip.transform;
+        grip_attach.transform.rotation = grip.GetRotation();
+        grip_attach.transform.position = grip.GetPosition();
     }
-
-
 }
