@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class ProjectileController : MonoBehaviour {
 
@@ -41,7 +41,7 @@ public class ProjectileController : MonoBehaviour {
 
     public virtual void HandleCollision(Collision hit)
     {
-        Debug.Log(hit);
+        Debug.Log(hit.collider.gameObject);
     }
 
     // Default move behaviour, follow the trajectory as mapped out by the trajectory control.
