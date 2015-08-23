@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 60cdadec692ef4d42b372cf6f5ad892d
+timeCreated: 1440295462
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Box008
+    100002: Box009
+    100004: Box010
+    100006: Box011
+    100008: Box012
+    100010: Box013
+    100012: Box014
+    100014: Box015
+    100016: Box016
+    100018: Box017
+    100020: Box018
+    100022: Box019
+    100024: Box020
+    100026: //RootNode
+    100028: Torus022
+    100030: Torus023
+    100032: Torus024
+    100034: Torus025
+    100036: Torus026
+    100038: Torus027
+    100040: Torus028
+    100042: Torus029
+    100044: Torus030
+    100046: Torus031
+    100048: Torus032
+    100050: Torus033
+    400000: Box008
+    400002: Box009
+    400004: Box010
+    400006: Box011
+    400008: Box012
+    400010: Box013
+    400012: Box014
+    400014: Box015
+    400016: Box016
+    400018: Box017
+    400020: Box018
+    400022: Box019
+    400024: Box020
+    400026: //RootNode
+    400028: Torus022
+    400030: Torus023
+    400032: Torus024
+    400034: Torus025
+    400036: Torus026
+    400038: Torus027
+    400040: Torus028
+    400042: Torus029
+    400044: Torus030
+    400046: Torus031
+    400048: Torus032
+    400050: Torus033
+    2300000: Box008
+    2300002: Box009
+    2300004: Box010
+    2300006: Box011
+    2300008: Box012
+    2300010: Box013
+    2300012: Box014
+    2300014: Box015
+    2300016: Box016
+    2300018: Box017
+    2300020: Box018
+    2300022: Box019
+    2300024: Box020
+    2300026: Torus022
+    2300028: Torus023
+    2300030: Torus024
+    2300032: Torus025
+    2300034: Torus026
+    2300036: Torus027
+    2300038: Torus028
+    2300040: Torus029
+    2300042: Torus030
+    2300044: Torus031
+    2300046: Torus032
+    2300048: Torus033
+    3300000: Box008
+    3300002: Box009
+    3300004: Box010
+    3300006: Box011
+    3300008: Box012
+    3300010: Box013
+    3300012: Box014
+    3300014: Box015
+    3300016: Box016
+    3300018: Box017
+    3300020: Box018
+    3300022: Box019
+    3300024: Box020
+    3300026: Torus022
+    3300028: Torus023
+    3300030: Torus024
+    3300032: Torus025
+    3300034: Torus026
+    3300036: Torus027
+    3300038: Torus028
+    3300040: Torus029
+    3300042: Torus030
+    3300044: Torus031
+    3300046: Torus032
+    3300048: Torus033
+    4300000: Box008
+    4300002: Box009
+    4300004: Box010
+    4300006: Box011
+    4300008: Box012
+    4300010: Box013
+    4300012: Box014
+    4300014: Box015
+    4300016: Box016
+    4300018: Box017
+    4300020: Box018
+    4300022: Box019
+    4300024: Box020
+    4300026: Torus022
+    4300028: Torus023
+    4300030: Torus024
+    4300032: Torus025
+    4300034: Torus026
+    4300036: Torus027
+    4300038: Torus028
+    4300040: Torus029
+    4300042: Torus030
+    4300044: Torus031
+    4300046: Torus032
+    4300048: Torus033
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
