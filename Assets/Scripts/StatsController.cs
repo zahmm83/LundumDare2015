@@ -23,6 +23,11 @@ public class StatsController : NetworkBehaviour {
     float respawnTime = 10.0f;
     float respawnTimer = 0.0f;
 
+    float lavaImmunityDuration = 0.5f;
+    float lavaImmunityTimer = 0.0f;
+    bool immuneToLava = false;
+    int lavaDamage = 50;
+    
 
     [SyncVar]
     public int playerScore = 1000;
@@ -35,12 +40,29 @@ public class StatsController : NetworkBehaviour {
 	
     void Update()
     {
+        if(immuneToLava)
+        {
+            lavaImmunityTimer += Time.deltaTime;
+            immuneToLava = lavaImmunityTimer < lavaImmunityDuration;
+        }
+
         CheckDeathCondition();
         if (isDead)
         {
             RespawnUpdate();
         }
     }
+
+    void OnTriggerStay()
+    {
+        if (!immuneToLava)
+        {
+            InformServerAboutDamage(lavaDamage);
+            lavaImmunityTimer = 0.0f;
+            immuneToLava = true;
+        }
+    }
+
 
     void CheckDeathCondition()
     {

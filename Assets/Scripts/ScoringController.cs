@@ -9,16 +9,14 @@ public class ScoringController : NetworkBehaviour {
     string scores;
 
     Text scoreText;
-
-    // Use this for initialization
+    
     void Awake()
     {
         scoreText = GameObject.Find("Scores").GetComponent<Text>();
         scores = "Show me some scores";
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         scores = GenerateScoreText();
     }
 
