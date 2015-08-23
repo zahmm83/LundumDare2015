@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+using ObjectMarkup;
+
 public class ProjectileController : MonoBehaviour {
 
     // Base movement variables
@@ -99,7 +101,14 @@ public class ProjectileController : MonoBehaviour {
         this.firedFrom = shooter;
         this.startingPosition = firedFrom.transform.position;
         this.direction = firedFrom.transform.forward;
-        Vector3 positionOffset = shooter.transform.forward + shooter.transform.up * 0.3f + shooter.transform.right * 0.4f;
-        this.transform.position = firedFrom.transform.position + positionOffset;
+
+        var marker_list = shooter.transform.root.GetComponentsInChildren<Marker>();
+        Marker spawn_loc = null;
+        foreach (var marker in marker_list)
+        {
+            if (marker.BoneType == "fire_spawn") { spawn_loc = marker; }
+        }
+
+        this.transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.2f);
     }
 }
