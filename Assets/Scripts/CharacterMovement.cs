@@ -76,10 +76,9 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
-
-            //velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-            //velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+            // Don't change velocity, just push the character in the forward direction.
             velocityChange = Vector3.zero;
+            playerRigidbody.AddForce(transform.forward * 2.0f, ForceMode.Force);
         }
 
 

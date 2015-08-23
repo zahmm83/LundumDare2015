@@ -30,7 +30,10 @@ public class ScoringController : NetworkBehaviour {
         foreach (GameObject player in players)
         {
             StatsController playerStats = player.GetComponent<StatsController>();
-            text += player.name + " - " + playerStats.playerScore + "\n";
+            if(playerStats != null)
+            {
+                text += player.name + " - " + playerStats.playerScore + "\n";
+            }
         }
 
         return text;
