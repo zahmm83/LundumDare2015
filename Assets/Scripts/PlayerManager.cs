@@ -17,8 +17,7 @@ public class PlayerManager : NetworkBehaviour
         if (isLocalPlayer)
         {
             playerName = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerName;
-            
-            //transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
+            transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
             CmdGiveServerPlayerName(playerName);
 
             Cursor.lockState = CursorLockMode.Locked;
