@@ -13,8 +13,8 @@ public class EquipmentController : NetworkBehaviour {
 
     [SyncVar (hook = "Fire")]
     bool fireWeapon;
-
-    // Use this for initialization
+    
+    // Poor Michael :(
     void Awake () {
 	    if(startingGearMain != null)
         {
@@ -23,7 +23,6 @@ public class EquipmentController : NetworkBehaviour {
         }
 	}
 	
-	// Update is called once per frame
 	void Update () {
         if (equipedGearMain != null && Input.GetMouseButtonDown(0) && GetComponent<StatsController>().isNotDead)
         {
@@ -37,9 +36,11 @@ public class EquipmentController : NetworkBehaviour {
     [Command]
     void CmdTellServerYouAreShooting()
     {
+        // All we really care about is that the hook function gets run
         fireWeapon = !fireWeapon;
     }
 
+    // This hook function will be run whenever the server updates the fireWeapon boolean.
     void Fire(bool fireWeapon)
     {
         WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();

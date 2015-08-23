@@ -35,7 +35,18 @@ public class CharacterMovement : MonoBehaviour
 
         var raycast_position = transform.position;
         raycast_position.y += 0.1f;
-        grounded = Physics.Raycast(raycast_position, -transform.up, 0.25f);
+
+        bool objectIsDirectlyBelow = Physics.Raycast(raycast_position, -transform.up, 0.25f);
+        bool objectIsFrontRight = Physics.Raycast(raycast_position, transform.forward + transform.right - transform.up, 0.3f);
+        bool objectIsBackRight = Physics.Raycast(raycast_position, -transform.forward + transform.right - transform.up, 0.3f);
+        bool objectIsBackLeft = Physics.Raycast(raycast_position, -transform.forward - transform.right - transform.up, 0.3f);
+        bool objectIsFrontLeft = Physics.Raycast(raycast_position, transform.forward - transform.right - transform.up, 0.3f);
+        
+        grounded = objectIsDirectlyBelow
+                || objectIsFrontRight
+                || objectIsBackRight
+                || objectIsBackLeft
+                || objectIsFrontLeft;
 
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
