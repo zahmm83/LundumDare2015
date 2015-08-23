@@ -7,7 +7,7 @@ public class PlayerDeath : NetworkBehaviour {
     StatsController playerHealthScript;
     
 	void Start () {
-        this.playerHealthScript = GetComponent<StatsController>();
+        playerHealthScript = GetComponent<StatsController>();
         playerHealthScript.EventDie += DisablePlayer;
 	}
 

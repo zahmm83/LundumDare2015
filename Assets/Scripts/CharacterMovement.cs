@@ -10,15 +10,22 @@ public class CharacterMovement : MonoBehaviour
     public float jumpHeight = 20;
     public float maxVelocityChange = 5;
     public Transform playerCamera;
+
+    public float groundedDetectionLength = 0.25f;
+
     private Rigidbody playerRigidbody;
     private bool grounded = false;
     private float xPos;
     private float yPos;
     private Vector3 targetVelocity;
+    private Animator anim;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        if (anim.layerCount == 2)
+            anim.SetLayerWeight(1, 1);
     }
 
     void Update()
@@ -32,21 +39,23 @@ public class CharacterMovement : MonoBehaviour
         var raycast_position = transform.position;
         raycast_position.y += 0.1f;
 
-        grounded = Physics.Raycast(raycast_position, -transform.up, 0.25f);
-
-        //if (Physics.Raycast(raycast_position, -transform.up, 0.25f))
-        //{
-        //    grounded = true;
-        //}
-        //else
-        //{
-        //    grounded = false;
-        //}
-
-        //Debug.Log(grounded);
+        bool objectIsDirectlyBelow = Physics.Raycast(raycast_position, -transform.up, groundedDetectionLength);
+        bool objectIsFrontRight = Physics.Raycast(raycast_position, transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackRight = Physics.Raycast(raycast_position, -transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackLeft = Physics.Raycast(raycast_position, -transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsFrontLeft = Physics.Raycast(raycast_position, transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
+        
+        grounded = objectIsDirectlyBelow
+                || objectIsFrontRight
+                || objectIsBackRight
+                || objectIsBackLeft
+                || objectIsFrontLeft;
 
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
+
+        anim.SetFloat("speed", playerRigidbody.velocity.magnitude);
+        anim.speed = Mathf.Clamp((playerRigidbody.velocity.magnitude/3), 1, 3);
     }
 
     void FixedUpdate()

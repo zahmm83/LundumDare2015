@@ -16,7 +16,7 @@ public class CharacterId : NetworkBehaviour {
     }
             
     void Awake () {
-        this.myTransform = this.transform;
+        myTransform = transform;
 	}
 	
     void Update()
