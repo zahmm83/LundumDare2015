@@ -109,6 +109,6 @@ public class ProjectileController : MonoBehaviour {
             if (marker.BoneType == "fire_spawn") { spawn_loc = marker; }
         }
 
-        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.2f);
+        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.3f);
     }
 }

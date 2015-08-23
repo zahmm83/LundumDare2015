@@ -23,6 +23,11 @@ public class StatsController : NetworkBehaviour {
     float respawnTime = 10.0f;
     float respawnTimer = 0.0f;
 
+
+    [SyncVar]
+    public int playerScore = 1000;
+
+
     void Start () {
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
@@ -43,6 +48,7 @@ public class StatsController : NetworkBehaviour {
         {
             if (EventDie != null)
             {
+                playerScore -= 100;
                 EventDie();
             }
         }

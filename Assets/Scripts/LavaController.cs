@@ -3,18 +3,8 @@ using System.Collections;
 
 public class LavaController : MonoBehaviour {
 
-    int damage = 100;
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+    public int damage = 50;
+    
     void OnCollisionEnter(Collision hit)
     {
         if (hit.collider.tag == "Player")

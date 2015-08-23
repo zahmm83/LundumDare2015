@@ -62,6 +62,7 @@ public class CharacterMovement : MonoBehaviour
     {
         targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         targetVelocity = transform.TransformDirection(targetVelocity);
+        targetVelocity = Vector3.Normalize(targetVelocity);
         targetVelocity *= speed;
 
         Vector3 velocity = playerRigidbody.velocity;
@@ -75,6 +76,9 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
+
+            //velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+            //velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange = Vector3.zero;
         }
 
