@@ -1,490 +1,111 @@
 fileFormatVersion: 2
-guid: 9517e3e1b945cd34c80a5169cfa82972
-timeCreated: 1440358179
+guid: a29db7f79607d604d9958f104e5cf078
+timeCreated: 1440352809
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: b_chest
-    100002: b_cog
-    100004: b_r_grip
-    100006: Group17358
-    100008: Group21210
-    100010: Group3195
-    100012: Group37302
-    100014: Group37369
-    100016: Group3866
-    100018: Group50250
-    100020: Group50251
-    100022: Group51383
-    100024: //RootNode
-    100026: world_root
-    100028: b_ankle_l
-    100030: b_ankle_r
-    100032: b_armL_l
-    100034: b_armL_r
-    100036: b_armU_l
-    100038: b_armU_ltwist01
-    100040: b_armU_ltwist02
-    100042: b_armU_r
-    100044: b_armU_rtwist01
-    100046: b_armU_rtwist02
-    100048: b_clav_l
-    100050: b_clav_r
-    100052: b_fire_loc
-    100054: b_grip_l
-    100056: b_grip_r
-    100058: b_hand_l
-    100060: b_hand_ltwist01
-    100062: b_hand_ltwist02
-    100064: b_hand_ltwist03
-    100066: b_hand_r
-    100068: b_hand_rtwist01
-    100070: b_hand_rtwist02
-    100072: b_hand_rtwist03
-    100074: b_legL_l
-    100076: b_legU_l
-    100078: b_legU_ltwist01
-    100080: b_legU_ltwist02
-    100082: b_neck
-    100084: b_regL_r
-    100086: b_regU_r
-    100088: b_regU_rtwist01
-    100090: b_regU_rtwist02
-    100092: b_skull
-    100094: b_spine01
-    100096: b_spine02
-    100098: b_spine03
-    100100: b_spine04
-    100102: b_tail01
-    100104: b_tail02
-    100106: b_tail03
-    100108: b_tail04
-    100110: b_toes_l
-    100112: b_toes_r
-    100114: box_gun:b_grip
-    100116: box_gun:barrel
-    100118: char01_0
-    100120: clav_l
-    100122: clav_r
-    100124: ctrfk_ankle_l
-    100126: ctrfk_ankle_r
-    100128: ctrfk_armL_l
-    100130: ctrfk_armL_r
-    100132: ctrfk_armU_l
-    100134: ctrfk_armU_r
-    100136: ctrfk_hanfk_l
-    100138: ctrfk_hanfk_r
-    100140: ctrfk_legL_l
-    100142: ctrfk_legU_l1
-    100144: ctrfk_neck
-    100146: ctrfk_regL_r
-    100148: ctrfk_regU_r1
-    100150: ctrfk_skull
-    100152: ctrfk_spine01
-    100154: ctrfk_spine02
-    100156: ctrfk_spine03
-    100158: ctrfk_spine04
-    100160: ctrfk_tail01
-    100162: ctrfk_tail02
-    100164: ctrfk_tail03
-    100166: ctrfk_tail04
-    100168: ctrfk_toes_l
-    100170: ctrfk_toes_r
-    100172: ctrik_ankle_l
-    100174: ctrik_ankle_r
-    100176: ctrik_hanik_l
-    100178: ctrik_hanik_r
-    100180: ctrld_cog
-    100182: d_ankle_l
-    100184: d_ankle_r
-    100186: d_armL_l
-    100188: d_armL_r
-    100190: d_armU_l
-    100192: d_armU_r
-    100194: d_clav_l
-    100196: d_clav_r
-    100198: d_cog
-    100200: d_hand_l
-    100202: d_hand_r
-    100204: d_legL_l
-    100206: d_legU_l
-    100208: d_neck
-    100210: d_regL_r
-    100212: d_regU_r
-    100214: d_skull
-    100216: d_spine01
-    100218: d_spine02
-    100220: d_spine03
-    100222: d_spine04
-    100224: d_tail01
-    100226: d_tail02
-    100228: d_tail03
-    100230: d_tail04
-    100232: d_toes_l
-    100234: d_toes_r
-    100236: fk_ankle_l
-    100238: fk_ankle_r
-    100240: fk_armL_l
-    100242: fk_armL_r
-    100244: fk_armU_l
-    100246: fk_armU_r
-    100248: fk_hanfk_l
-    100250: fk_hanfk_r
-    100252: fk_legL_l
-    100254: fk_legU_l1
-    100256: fk_neck
-    100258: fk_regL_r
-    100260: fk_regU_r1
-    100262: fk_skull
-    100264: fk_spine01
-    100266: fk_spine02
-    100268: fk_spine03
-    100270: fk_spine04
-    100272: fk_tail01
-    100274: fk_tail02
-    100276: fk_tail03
-    100278: fk_tail04
-    100280: fk_toes_l
-    100282: fk_toes_r
-    100284: grp_geo
-    100286: grp_rig
-    100288: grpclav_l
-    100290: grpclav_r
-    100292: grpd_cog
-    100294: grpfk_ankle_l
-    100296: grpfk_ankle_r
-    100298: grpfk_armL_l
-    100300: grpfk_armL_r
-    100302: grpfk_armU_l
-    100304: grpfk_armU_r
-    100306: grpfk_hanfk_l
-    100308: grpfk_hanfk_r
-    100310: grpfk_legL_l
-    100312: grpfk_legU_l1
-    100314: grpfk_neck
-    100316: grpfk_regL_r
-    100318: grpfk_regU_r1
-    100320: grpfk_skull
-    100322: grpfk_spine01
-    100324: grpfk_spine02
-    100326: grpfk_spine03
-    100328: grpfk_spine04
-    100330: grpfk_tail01
-    100332: grpfk_tail02
-    100334: grpfk_tail03
-    100336: grpfk_tail04
-    100338: grpfk_toes_l
-    100340: grpfk_toes_r
-    100342: grpik_ankle_l
-    100344: grpik_ankle_r
-    100346: grpik_hanik_l
-    100348: grpik_hanik_r
-    100350: ik_ankle_l
-    100352: ik_ankle_r
-    100354: ik_armikfkSwitch_l
-    100356: ik_armikfkSwitch_l 1
-    100358: ik_armikfkSwitch_r
-    100360: ik_armikfkSwitch_r 1
-    100362: ik_armL_l
-    100364: ik_armL_r
-    100366: ik_armU_l
-    100368: ik_armU_r
-    100370: ik_hanik_l
-    100372: ik_hanik_r
-    100374: ik_legikfkSwitch_l1
-    100376: ik_legikfkSwitch_l2
-    100378: ik_legL_l
-    100380: ik_legU_l1
-    100382: ik_regikfkSwitch_r1
-    100384: ik_regikfkSwitch_r2
-    100386: ik_regL_r
-    100388: ik_regU_r1
-    100390: ik_toes_l
-    100392: ik_toes_r
-    100394: locator1
-    100396: locator2
-    100398: revFoot_aRotCtrlfoot_l
-    100400: revFoot_aRotCtrlfoot_r
-    100402: revFoot_aRotCtrlToe_l
-    100404: revFoot_aRotCtrlToe_r
-    100406: revFoot_aRotfoot_l
-    100408: revFoot_aRotfoot_r
-    100410: revFoot_aRottoe_l
-    100412: revFoot_aRottoe_r
-    100414: revFoot_pivotball_l
-    100416: revFoot_pivotball_r
-    100418: revFoot_pivotheel_l
-    100420: revFoot_pivotheel_r
-    100422: revFoot_pivottoe_l
-    100424: revFoot_pivottoe_r
-    100426: revFoot_rockinner_rock_l
-    100428: revFoot_rockinner_rock_r
-    100430: revFoot_rockouter_rock_l
-    100432: revFoot_rockouter_rock_r
-    100434: revFoot_rollball_l
-    100436: revFoot_rollball_r
-    100438: revFoot_rollheel_l
-    100440: revFoot_rollheel_r
-    100442: revFoot_rolltoe_l
-    100444: revFoot_rolltoe_r
-    400000: b_chest
-    400002: b_cog
-    400004: b_r_grip
-    400006: Group17358
-    400008: Group21210
-    400010: Group3195
-    400012: Group37302
-    400014: Group37369
-    400016: Group3866
-    400018: Group50250
-    400020: Group50251
-    400022: Group51383
-    400024: //RootNode
-    400026: world_root
-    400028: b_ankle_l
-    400030: b_ankle_r
-    400032: b_armL_l
-    400034: b_armL_r
-    400036: b_armU_l
-    400038: b_armU_ltwist01
-    400040: b_armU_ltwist02
-    400042: b_armU_r
-    400044: b_armU_rtwist01
-    400046: b_armU_rtwist02
-    400048: b_clav_l
-    400050: b_clav_r
-    400052: b_fire_loc
-    400054: b_grip_l
-    400056: b_grip_r
-    400058: b_hand_l
-    400060: b_hand_ltwist01
-    400062: b_hand_ltwist02
-    400064: b_hand_ltwist03
-    400066: b_hand_r
-    400068: b_hand_rtwist01
-    400070: b_hand_rtwist02
-    400072: b_hand_rtwist03
-    400074: b_legL_l
-    400076: b_legU_l
-    400078: b_legU_ltwist01
-    400080: b_legU_ltwist02
-    400082: b_neck
-    400084: b_regL_r
-    400086: b_regU_r
-    400088: b_regU_rtwist01
-    400090: b_regU_rtwist02
-    400092: b_skull
-    400094: b_spine01
-    400096: b_spine02
-    400098: b_spine03
-    400100: b_spine04
-    400102: b_tail01
-    400104: b_tail02
-    400106: b_tail03
-    400108: b_tail04
-    400110: b_toes_l
-    400112: b_toes_r
-    400114: box_gun:b_grip
-    400116: box_gun:barrel
-    400118: char01_0
-    400120: clav_l
-    400122: clav_r
-    400124: ctrfk_ankle_l
-    400126: ctrfk_ankle_r
-    400128: ctrfk_armL_l
-    400130: ctrfk_armL_r
-    400132: ctrfk_armU_l
-    400134: ctrfk_armU_r
-    400136: ctrfk_hanfk_l
-    400138: ctrfk_hanfk_r
-    400140: ctrfk_legL_l
-    400142: ctrfk_legU_l1
-    400144: ctrfk_neck
-    400146: ctrfk_regL_r
-    400148: ctrfk_regU_r1
-    400150: ctrfk_skull
-    400152: ctrfk_spine01
-    400154: ctrfk_spine02
-    400156: ctrfk_spine03
-    400158: ctrfk_spine04
-    400160: ctrfk_tail01
-    400162: ctrfk_tail02
-    400164: ctrfk_tail03
-    400166: ctrfk_tail04
-    400168: ctrfk_toes_l
-    400170: ctrfk_toes_r
-    400172: ctrik_ankle_l
-    400174: ctrik_ankle_r
-    400176: ctrik_hanik_l
-    400178: ctrik_hanik_r
-    400180: ctrld_cog
-    400182: d_ankle_l
-    400184: d_ankle_r
-    400186: d_armL_l
-    400188: d_armL_r
-    400190: d_armU_l
-    400192: d_armU_r
-    400194: d_clav_l
-    400196: d_clav_r
-    400198: d_cog
-    400200: d_hand_l
-    400202: d_hand_r
-    400204: d_legL_l
-    400206: d_legU_l
-    400208: d_neck
-    400210: d_regL_r
-    400212: d_regU_r
-    400214: d_skull
-    400216: d_spine01
-    400218: d_spine02
-    400220: d_spine03
-    400222: d_spine04
-    400224: d_tail01
-    400226: d_tail02
-    400228: d_tail03
-    400230: d_tail04
-    400232: d_toes_l
-    400234: d_toes_r
-    400236: fk_ankle_l
-    400238: fk_ankle_r
-    400240: fk_armL_l
-    400242: fk_armL_r
-    400244: fk_armU_l
-    400246: fk_armU_r
-    400248: fk_hanfk_l
-    400250: fk_hanfk_r
-    400252: fk_legL_l
-    400254: fk_legU_l1
-    400256: fk_neck
-    400258: fk_regL_r
-    400260: fk_regU_r1
-    400262: fk_skull
-    400264: fk_spine01
-    400266: fk_spine02
-    400268: fk_spine03
-    400270: fk_spine04
-    400272: fk_tail01
-    400274: fk_tail02
-    400276: fk_tail03
-    400278: fk_tail04
-    400280: fk_toes_l
-    400282: fk_toes_r
-    400284: grp_geo
-    400286: grp_rig
-    400288: grpclav_l
-    400290: grpclav_r
-    400292: grpd_cog
-    400294: grpfk_ankle_l
-    400296: grpfk_ankle_r
-    400298: grpfk_armL_l
-    400300: grpfk_armL_r
-    400302: grpfk_armU_l
-    400304: grpfk_armU_r
-    400306: grpfk_hanfk_l
-    400308: grpfk_hanfk_r
-    400310: grpfk_legL_l
-    400312: grpfk_legU_l1
-    400314: grpfk_neck
-    400316: grpfk_regL_r
-    400318: grpfk_regU_r1
-    400320: grpfk_skull
-    400322: grpfk_spine01
-    400324: grpfk_spine02
-    400326: grpfk_spine03
-    400328: grpfk_spine04
-    400330: grpfk_tail01
-    400332: grpfk_tail02
-    400334: grpfk_tail03
-    400336: grpfk_tail04
-    400338: grpfk_toes_l
-    400340: grpfk_toes_r
-    400342: grpik_ankle_l
-    400344: grpik_ankle_r
-    400346: grpik_hanik_l
-    400348: grpik_hanik_r
-    400350: ik_ankle_l
-    400352: ik_ankle_r
-    400354: ik_armikfkSwitch_l
-    400356: ik_armikfkSwitch_l 1
-    400358: ik_armikfkSwitch_r
-    400360: ik_armikfkSwitch_r 1
-    400362: ik_armL_l
-    400364: ik_armL_r
-    400366: ik_armU_l
-    400368: ik_armU_r
-    400370: ik_hanik_l
-    400372: ik_hanik_r
-    400374: ik_legikfkSwitch_l1
-    400376: ik_legikfkSwitch_l2
-    400378: ik_legL_l
-    400380: ik_legU_l1
-    400382: ik_regikfkSwitch_r1
-    400384: ik_regikfkSwitch_r2
-    400386: ik_regL_r
-    400388: ik_regU_r1
-    400390: ik_toes_l
-    400392: ik_toes_r
-    400394: locator1
-    400396: locator2
-    400398: revFoot_aRotCtrlfoot_l
-    400400: revFoot_aRotCtrlfoot_r
-    400402: revFoot_aRotCtrlToe_l
-    400404: revFoot_aRotCtrlToe_r
-    400406: revFoot_aRotfoot_l
-    400408: revFoot_aRotfoot_r
-    400410: revFoot_aRottoe_l
-    400412: revFoot_aRottoe_r
-    400414: revFoot_pivotball_l
-    400416: revFoot_pivotball_r
-    400418: revFoot_pivotheel_l
-    400420: revFoot_pivotheel_r
-    400422: revFoot_pivottoe_l
-    400424: revFoot_pivottoe_r
-    400426: revFoot_rockinner_rock_l
-    400428: revFoot_rockinner_rock_r
-    400430: revFoot_rockouter_rock_l
-    400432: revFoot_rockouter_rock_r
-    400434: revFoot_rollball_l
-    400436: revFoot_rollball_r
-    400438: revFoot_rollheel_l
-    400440: revFoot_rollheel_r
-    400442: revFoot_rolltoe_l
-    400444: revFoot_rolltoe_r
-    2300000: Group17358
-    2300002: Group21210
-    2300004: Group3195
-    2300006: Group37302
-    2300008: Group37369
-    2300010: Group3866
-    2300012: Group50250
-    2300014: Group50251
-    2300016: Group51383
-    2300018: box_gun:barrel
-    3300000: Group17358
-    3300002: Group21210
-    3300004: Group3195
-    3300006: Group37302
-    3300008: Group37369
-    3300010: Group3866
-    3300012: Group50250
-    3300014: Group50251
-    3300016: Group51383
-    3300018: box_gun:barrel
-    4300000: Group51383
-    4300002: Group21210
-    4300004: Group17358
-    4300006: Group50251
-    4300008: Group3866
-    4300010: Group37369
-    4300012: Group37302
-    4300014: Group50250
-    4300016: Group3195
-    4300018: char01_0
-    4300020: box_gun:barrel
-    7400000: idle
-    7400002: walk
-    7400004: run
+    100000: b_ankle_l
+    100002: b_ankle_r
+    100004: b_armL_l
+    100006: b_armL_r
+    100008: b_armU_l
+    100010: b_armU_ltwist01
+    100012: b_armU_ltwist02
+    100014: b_armU_r
+    100016: b_armU_rtwist01
+    100018: b_armU_rtwist02
+    100020: b_clav_l
+    100022: b_clav_r
+    100024: b_cog
+    100026: b_fire_loc
+    100028: b_grip_l
+    100030: b_grip_r
+    100032: b_hand_l
+    100034: b_hand_ltwist01
+    100036: b_hand_ltwist02
+    100038: b_hand_ltwist03
+    100040: b_hand_r
+    100042: b_hand_rtwist01
+    100044: b_hand_rtwist02
+    100046: b_hand_rtwist03
+    100048: b_legL_l
+    100050: b_legU_l
+    100052: b_legU_ltwist01
+    100054: b_legU_ltwist02
+    100056: b_neck
+    100058: b_regL_r
+    100060: b_regU_r
+    100062: b_regU_rtwist01
+    100064: b_regU_rtwist02
+    100066: b_skull
+    100068: b_spine01
+    100070: b_spine02
+    100072: b_spine03
+    100074: b_spine04
+    100076: b_tail01
+    100078: b_tail02
+    100080: b_tail03
+    100082: b_tail04
+    100084: b_toes_l
+    100086: b_toes_r
+    100088: char01_0
+    100090: grp_geo
+    100092: //RootNode
+    100094: world_root
+    400000: b_ankle_l
+    400002: b_ankle_r
+    400004: b_armL_l
+    400006: b_armL_r
+    400008: b_armU_l
+    400010: b_armU_ltwist01
+    400012: b_armU_ltwist02
+    400014: b_armU_r
+    400016: b_armU_rtwist01
+    400018: b_armU_rtwist02
+    400020: b_clav_l
+    400022: b_clav_r
+    400024: b_cog
+    400026: b_fire_loc
+    400028: b_grip_l
+    400030: b_grip_r
+    400032: b_hand_l
+    400034: b_hand_ltwist01
+    400036: b_hand_ltwist02
+    400038: b_hand_ltwist03
+    400040: b_hand_r
+    400042: b_hand_rtwist01
+    400044: b_hand_rtwist02
+    400046: b_hand_rtwist03
+    400048: b_legL_l
+    400050: b_legU_l
+    400052: b_legU_ltwist01
+    400054: b_legU_ltwist02
+    400056: b_neck
+    400058: b_regL_r
+    400060: b_regU_r
+    400062: b_regU_rtwist01
+    400064: b_regU_rtwist02
+    400066: b_skull
+    400068: b_spine01
+    400070: b_spine02
+    400072: b_spine03
+    400074: b_spine04
+    400076: b_tail01
+    400078: b_tail02
+    400080: b_tail03
+    400082: b_tail04
+    400084: b_toes_l
+    400086: b_toes_r
+    400088: char01_0
+    400090: grp_geo
+    400092: //RootNode
+    400094: world_root
+    4300000: char01_0
+    7400000: jump
+    7400002: air_up
+    7400004: air_down
+    7400006: land
     9500000: //RootNode
     13700000: char01_0
   materials:
@@ -497,7 +118,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 'MuscleClip ''player_triceratops'' conversion warning:
+    animationImportWarnings: 'MuscleClip ''player_triceratops.jump'' conversion warning:
       ''world_root/b_cog/b_spine01/b_spine02/b_spine03'' is between humanoid transforms
       and has rotation animation. This might lower retargeting quality.
 
@@ -513,16 +134,16 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle
+      name: jump
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 29
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 0
@@ -539,10 +160,10 @@ ModelImporter:
       maskType: 1
       maskSource: {fileID: 101100000, guid: 83980dcf7eccea144b141106170f75b6, type: 2}
     - serializedVersion: 16
-      name: walk
+      name: air_up
       takeName: Take 001
-      firstFrame: 35
-      lastFrame: 59
+      firstFrame: 24
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -661,16 +282,138 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: run
+      name: air_down
       takeName: Take 001
-      firstFrame: 64
-      lastFrame: 81
+      firstFrame: 34
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: grp_geo
+        weight: 0
+      - path: grp_geo/char01_0
+        weight: 0
+      - path: world_root
+        weight: 1
+      - path: world_root/b_cog
+        weight: 1
+      - path: world_root/b_cog/b_spine01
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l/b_ankle_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l/b_ankle_l/b_toes_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legU_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legU_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_regU_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r/b_ankle_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r/b_ankle_r/b_toes_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regU_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regU_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_l/b_grip_l
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armU_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armU_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_r/b_grip_r
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armU_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armU_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_neck
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_neck/b_skull
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_tail01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02/b_tail03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02/b_tail03/b_tail04
+        weight: 0
+      - path: world_root/b_fire_loc
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: land
+      takeName: Take 001
+      firstFrame: 34
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 0
@@ -806,7 +549,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human: []
     skeleton: []
@@ -818,7 +561,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: world_root
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9517e3e1b945cd34c80a5169cfa82972,
+    type: 3}
   animationType: 2
   additionalBone: 0
   userData: 

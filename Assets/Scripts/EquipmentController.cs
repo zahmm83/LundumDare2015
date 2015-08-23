@@ -11,9 +11,13 @@ public class EquipmentController : NetworkBehaviour {
     public GameObject equipedGearMain;
     public GameObject equipedGearSecondary;
 
+    private float aim_timer = 0.0f;
+
     [SyncVar (hook = "Fire")]
     bool fireWeapon;
     
+    Animator anim { get { return transform.root.GetComponent<CharacterMovement>().anim; } }
+
     // Poor Michael :(
     void Awake () {
 	    if(startingGearMain != null)
@@ -31,6 +35,11 @@ public class EquipmentController : NetworkBehaviour {
                 CmdTellServerYouAreShooting();
             }
         }
+
+        if(aim_timer > 3) { anim.SetBool("shooting", false); }
+        aim_timer += Time.deltaTime;
+
+        anim.SetBool("has_weapon", equipedGearMain != null);
 	}
 
     [Command]
@@ -45,6 +54,8 @@ public class EquipmentController : NetworkBehaviour {
     {
         WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();
         mainWeapon.FireWeapon(gameObject);
+        anim.SetBool("shooting", true);
+        aim_timer = 0.0f;
     }
 
     public void PickupGear(GameObject gear)
