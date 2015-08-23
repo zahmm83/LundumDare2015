@@ -15,7 +15,8 @@ public class GameNetworkManager : NetworkManager
     {
         SetIPAddress();
         SetPort();
-        NetworkManager.singleton.StartClient();
+        if (NetworkManager.singleton.networkAddress.Length > 0)
+            NetworkManager.singleton.StartClient();
     }
 
     private void SetIPAddress()
@@ -32,6 +33,7 @@ public class GameNetworkManager : NetworkManager
 
     void OnLevelWasLoaded (int level)
     {
+        //Menu has to always has to have the index 0
         if (level == 0)
         {
             SetupMenuSceneButton();
