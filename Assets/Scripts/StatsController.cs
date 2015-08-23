@@ -58,10 +58,10 @@ public class StatsController : NetworkBehaviour {
         this.health -= damage;
     }
 
-    public void PlayerDied()
-    {
-        Debug.Log("Hey now, you're supposed to be dead... stop running around.");
-    }
+    //public void PlayerDied()
+    //{
+    //    Debug.Log("Hey now, you're supposed to be dead... stop running around.");
+    //}
 
     [Command]
     void CmdTellServerYouTookDamage(string uniqueId, int damage)

@@ -13,7 +13,7 @@ public class ProjectileController : MonoBehaviour {
     protected Vector3 relativeMidpoint = Vector3.zero; // (distance, height, curvature)
     protected Vector3 relativeEndpoint = Vector3.zero; // (distance, height, curvature)
 
-    protected GameObject weaponFiredFrom;
+    protected GameObject firedFrom;
 
     // Despawn variables
     float lifeTime = 10.0f;
@@ -55,7 +55,7 @@ public class ProjectileController : MonoBehaviour {
     public virtual void Move()
     {
         // Clear out projectiles for weapons that have been destroyed.
-        if(weaponFiredFrom == null)
+        if(firedFrom == null)
         {
             Destroy(this.gameObject);
             return;
@@ -72,11 +72,9 @@ public class ProjectileController : MonoBehaviour {
                 percentageDistanceTraveled = distanceTraveled / this.relativeMidpoint.x;
             }
             // Invert the arc by using 1-% instead of %
-            Vector3 heightAdjustment = this.weaponFiredFrom.transform.up * (1 - percentageDistanceTraveled) * relativeMidpoint.y;
-            Vector3 curveAdjustment = this.weaponFiredFrom.transform.right * (1 - percentageDistanceTraveled) * relativeMidpoint.z;
-            //float curveAdjustment = (1 - percentageDistanceTraveled) * relativeMidpoint.z;
+            Vector3 heightAdjustment = this.firedFrom.transform.up * (1 - percentageDistanceTraveled) * relativeMidpoint.y;
+            Vector3 curveAdjustment = this.firedFrom.transform.right * (1 - percentageDistanceTraveled) * relativeMidpoint.z;
 
-            //Vector3 directionModifier = new Vector3(0.0f, heightAdjustment, curveAdjustment);
             this.transform.position += ((this.direction + heightAdjustment + curveAdjustment) * this.speed * Time.deltaTime);
         }
         else
@@ -88,20 +86,20 @@ public class ProjectileController : MonoBehaviour {
                 percentageDistanceTraveled = distanceTraveled / (this.relativeEndpoint.x - relativeMidpoint.x);
             }
             // Don't want to invert the arc on the way down
-            Vector3 heightAdjustment = this.weaponFiredFrom.transform.up * (percentageDistanceTraveled) * (relativeEndpoint.y - relativeMidpoint.y);
-            Vector3 curveAdjustment = this.weaponFiredFrom.transform.right * (percentageDistanceTraveled) * (relativeEndpoint.z - relativeMidpoint.z);
+            Vector3 heightAdjustment = this.firedFrom.transform.up * (percentageDistanceTraveled) * (relativeEndpoint.y - relativeMidpoint.y);
+            Vector3 curveAdjustment = this.firedFrom.transform.right * (percentageDistanceTraveled) * (relativeEndpoint.z - relativeMidpoint.z);
 
-            //Vector3 directionModifier = new Vector3(0.0f, heightAdjustment, curveAdjustment);
             this.transform.position += ((this.direction + heightAdjustment + curveAdjustment) * this.speed * Time.deltaTime);
         }
     }
 
     // Default initialization, set the direction as weapon forward and position the same as the weapon.
-    public virtual void Initialize(GameObject weapon)
+    public virtual void Initialize(GameObject shooter)
     {
-        this.weaponFiredFrom = weapon;
-        this.startingPosition = weaponFiredFrom.transform.position;
-        this.direction = weaponFiredFrom.transform.forward;
-        this.transform.position = weaponFiredFrom.transform.position;
+        this.firedFrom = shooter;
+        this.startingPosition = firedFrom.transform.position;
+        this.direction = firedFrom.transform.forward;
+        Vector3 positionOffset = shooter.transform.forward + shooter.transform.up * 0.3f + shooter.transform.right * 0.4f;
+        this.transform.position = firedFrom.transform.position + positionOffset;
     }
 }

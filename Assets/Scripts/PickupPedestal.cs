@@ -9,7 +9,7 @@ public class PickupPedestal : NetworkBehaviour {
     public List<GameObject> potentialGear;
     public float respawnTime = 2.0f;
     float timer = 0.0f;
-    Vector3 gearRelativePosition = new Vector3(0.0f, 1.0f, 0.0f);
+    Vector3 gearRelativePosition = new Vector3(0.0f, 0.5f, 0.0f);
 
     void Start () {
         SpawnGear();
@@ -19,7 +19,6 @@ public class PickupPedestal : NetworkBehaviour {
 	void Update () {
         if(connectedGear == null)
         {
-
             timer += Time.deltaTime;
         } 
 
@@ -41,6 +40,7 @@ public class PickupPedestal : NetworkBehaviour {
         if (connectedGear != null && hit.collider.tag == "Player")
         {
             hit.collider.GetComponent<EquipmentController>().PickupGear(connectedGear);
+            indexConnectedGear = -1;
             connectedGear = null;
         }
     }
@@ -76,6 +76,12 @@ public class PickupPedestal : NetworkBehaviour {
 
     public void SpawnNewGear(int indexConnectedGear)
     {
+        if (indexConnectedGear == -1)
+        {
+            // This only happens cause we need to force-change the index value, it happens on
+            // pickup of the item and we dont want the weapon spawning yet so just get out.
+            return;
+        }
         if (connectedGear != null)
         {
             Destroy(connectedGear);

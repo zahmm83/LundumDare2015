@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
 
-public class LavaController : NetworkBehaviour {
+public class LavaController : MonoBehaviour {
 
     int damage = 20;
 
@@ -20,18 +19,12 @@ public class LavaController : NetworkBehaviour {
     {
         if (hit.collider.tag == "Player")
         {
-            //string playerUniqueId = hit.transform.name;
-            //CmdTellServerWhoTookDamage(playerUniqueId, damage);
             hit.collider.GetComponent<StatsController>().InformServerAboutDamage(damage);
-            //Debug.Log("You sir are stepping in lava..");
+            // TODO Bounce the player whenever they take damage, both resets the collision
+            // and looks neat ;p though breaks if the player somehow lands flat without
+            // bouncing (hits their head or something).
+            hit.collider.GetComponent<Rigidbody>().AddForce(hit.transform.up * 125, ForceMode.Force);
         }
     }
-
-    //[Command]
-    //void CmdTellServerWhoTookDamage (int damage)
-    //{
-    //    GameObject player = GameObject.Find(uniqueId);
-    //    player.GetComponent<StatsController>().InformServerAboutDamage(damage);
-    //}
 
 }

@@ -18,6 +18,7 @@ public class PlayerManager : NetworkBehaviour
 
             player.GetComponent<CharacterMovement>().enabled = true;
             player.GetComponent<EquipmentController>().enabled = true;
+            player.GetComponent<StatsController>().enabled = true;
             isLocal = true;
         }
         
