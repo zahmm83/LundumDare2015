@@ -12,6 +12,9 @@ public class PlayerManager : NetworkBehaviour
     {
 	    if (isLocalPlayer)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
             Camera playerCamera = player.GetComponentInChildren<Camera>();
             playerCamera.enabled = true;
             playerCamera.GetComponent<AudioListener>().enabled = true;
