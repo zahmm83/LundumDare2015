@@ -10,6 +10,9 @@ public class CharacterMovement : MonoBehaviour
     public float jumpHeight = 20;
     public float maxVelocityChange = 5;
     public Transform playerCamera;
+
+    public float groundedDetectionLength = 0.25f;
+
     private Rigidbody playerRigidbody;
     private bool grounded = false;
     private float xPos;
@@ -36,11 +39,11 @@ public class CharacterMovement : MonoBehaviour
         var raycast_position = transform.position;
         raycast_position.y += 0.1f;
 
-        bool objectIsDirectlyBelow = Physics.Raycast(raycast_position, -transform.up, 0.25f);
-        bool objectIsFrontRight = Physics.Raycast(raycast_position, transform.forward + transform.right - transform.up, 0.3f);
-        bool objectIsBackRight = Physics.Raycast(raycast_position, -transform.forward + transform.right - transform.up, 0.3f);
-        bool objectIsBackLeft = Physics.Raycast(raycast_position, -transform.forward - transform.right - transform.up, 0.3f);
-        bool objectIsFrontLeft = Physics.Raycast(raycast_position, transform.forward - transform.right - transform.up, 0.3f);
+        bool objectIsDirectlyBelow = Physics.Raycast(raycast_position, -transform.up, groundedDetectionLength);
+        bool objectIsFrontRight = Physics.Raycast(raycast_position, transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackRight = Physics.Raycast(raycast_position, -transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackLeft = Physics.Raycast(raycast_position, -transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsFrontLeft = Physics.Raycast(raycast_position, transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
         
         grounded = objectIsDirectlyBelow
                 || objectIsFrontRight
