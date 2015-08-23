@@ -22,6 +22,7 @@ public class PlayerRespawn : NetworkBehaviour {
 
         transform.position = spawnLocations[randomIndex].transform.position;
 
+        transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = true;
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers)
         {

@@ -7,7 +7,6 @@ public class WeaponController : MonoBehaviour {
     public GameObject projectile;
 
     public float cooldown;
-    public float cooldownTimer;
     
     public virtual void FireWeapon(GameObject shooter)
     {

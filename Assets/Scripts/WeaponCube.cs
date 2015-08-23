@@ -4,9 +4,9 @@ using System.Collections;
 
 public class WeaponCube : WeaponController {
     
-	void Awake ()
+	void Start ()
     {
-        positionOffSet = new Vector3(0.6f, 0.3f, 0.25f);
+
     }
 
 }

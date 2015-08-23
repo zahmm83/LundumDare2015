@@ -6,30 +6,26 @@ Direct3D:
     Vendor:   ATI
     VRAM:     2022 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.046 seconds
-desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.052 seconds
+desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1f2c -> priority: 1 
-  Thread -> id: 22d8 -> priority: 1 
+  Thread -> id: 3ac4 -> priority: 1 
+  Thread -> id: 4f60 -> priority: 1 
 HLAPI CRC channel count error local: 4 remote: 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
@@ -55,11 +51,11 @@ CRC Local Dump PickupPedestal : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-CRC Remote Dump StatsController : 0
+CRC Remote Dump CharacterId : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-CRC Remote Dump CharacterId : 0
+CRC Remote Dump StatsController : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -75,20 +71,8 @@ CRC Remote Dump PickupPedestal : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-UnloadTime: 2.179455 ms
+UnloadTime: 2.710591 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 741.
-Total: 0.481358 ms (FindLiveObjects: 0.037461 ms CreateObjectMapping: 0.061067 ms MarkObjects: 0.374874 ms  DeleteObjects: 0.007441 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EquipmentController.Fire (Boolean fireWeapon) [0x00000] in <filename unknown>:0 
-  at EquipmentController.OnDeserialize (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkIdentity.OnUpdateVars (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.ClientScene.OnUpdateVarsMessage (UnityEngine.Networking.NetworkMessage netMsg) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkConnection.HandleMessage (System.Collections.Generic.Dictionary`2 handler, UnityEngine.Networking.NetworkReader reader, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkClient.Update () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkClient.UpdateClients () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkIdentity.UNetStaticUpdate () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 739.
+Total: 0.419264 ms (FindLiveObjects: 0.026685 ms CreateObjectMapping: 0.038488 ms MarkObjects: 0.336386 ms  DeleteObjects: 0.016934 ms)
 

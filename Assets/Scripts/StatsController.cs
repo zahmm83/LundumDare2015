@@ -56,9 +56,10 @@ public class StatsController : NetworkBehaviour {
         }
     }
 
-    void OnTriggerStay()
+    // Lava Damage
+    void OnTriggerStay(Collider target)
     {
-        if (!immuneToLava)
+        if (!immuneToLava && target.tag == "Lava")
         {
             InformServerAboutDamage(lavaDamage);
             lavaImmunityTimer = 0.0f;
@@ -126,8 +127,11 @@ public class StatsController : NetworkBehaviour {
         SetHealthText();
         if(respawnTimer > respawnTime)
         {
-            CmdRespawnOnServer();
             CheckRespawnCondition();
+            if (isLocalPlayer)
+            {
+                CmdRespawnOnServer();
+            }
         }
     }
     
@@ -164,7 +168,7 @@ public class StatsController : NetworkBehaviour {
     [Command]
     void CmdRespawnOnServer()
     {
-        health = 500;
+        health = 100;
     }
 
 }

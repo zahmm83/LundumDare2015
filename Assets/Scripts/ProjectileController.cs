@@ -8,7 +8,7 @@ public class ProjectileController : MonoBehaviour {
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
     public float speed = 15.0f;
-    public float force = 10000.0f;
+    public float force = 10.0f;
 
     // Trajectory control variables
     protected Vector3 startingPosition = Vector3.zero; // regular coordinates
@@ -47,15 +47,29 @@ public class ProjectileController : MonoBehaviour {
         }
 
         // Always handle collision, even if not hitting a player.
-        HandleCollision(hit);
+        HandleCollision(hit.collider);
     }
 
-    public virtual void HandleCollision(Collision hit)
+    //void OnTriggerEnter(Collider target)
+    //{
+    //    if(target.tag == "Player")
+    //    {
+    //        StatsController playerStats = target.gameObject.GetComponent<StatsController>();
+    //        if (playerStats != null)
+    //        {
+    //            playerStats.AddPlayerHitId(shooterId);
+    //        }
+    //    }
+
+    //    HandleCollision(target);
+    //}
+
+    public virtual void HandleCollision(Collider hit)
     {
-        Rigidbody target = hit.collider.GetComponent<Rigidbody>();
+        Rigidbody target = hit.GetComponent<Rigidbody>();
         if (target != null)
         {
-            target.AddForce(direction * force, ForceMode.Force);
+            target.AddForce(direction * force, ForceMode.Impulse);
             Destroy(gameObject);
         }
     }
