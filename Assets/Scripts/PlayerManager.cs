@@ -6,6 +6,7 @@ public class PlayerManager : NetworkBehaviour
 {
     [SerializeField]
     private GameObject player;
+    public bool isLocal = false;
 
 	void Start ()
     {
@@ -17,13 +18,18 @@ public class PlayerManager : NetworkBehaviour
 
             player.GetComponent<CharacterMovement>().enabled = true;
             player.GetComponent<EquipmentController>().enabled = true;
+            //player.GetComponent<StatsController>().enabled = true;
+            isLocal = true;
         }
-
-
-            GameObject[] weaponSpawners = GameObject.FindGameObjectsWithTag("WeaponSpawner");
-            for (int i = 0; i < weaponSpawners.Length; i++)
+        
+        GameObject[] weaponSpawners = GameObject.FindGameObjectsWithTag("WeaponSpawner");
+        for (int i = 0; i < weaponSpawners.Length; i++)
+        {
+            PickupPedestal pedestal = weaponSpawners[i].GetComponent<PickupPedestal>();
+            if(pedestal != null)
             {
-                weaponSpawners[i].GetComponent<PickupPedestal>().SpawnConnectedGearClient();
+                pedestal.SpawnConnectedGearClient();
+            }
         }
 	}
 }

@@ -9,6 +9,7 @@ public class WeaponController : NetworkBehaviour {
 
     public virtual void FireWeapon(GameObject shooter)
     {
-        Debug.Log("Default Fire Behaviour");
+        GameObject firedShot = Instantiate(this.projectile);
+        firedShot.GetComponent<ProjectileController>().Initialize(shooter);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LavaController : MonoBehaviour {
 
-    int damage = 20;
+    int damage = 100;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,11 @@ public class LavaController : MonoBehaviour {
     {
         if (hit.collider.tag == "Player")
         {
-            hit.collider.GetComponent<StatsController>().TakeDamage(damage);
-            Debug.Log("You sir are stepping in lava..");
+            hit.collider.GetComponent<StatsController>().InformServerAboutDamage(damage);
+            // TODO Bounce the player whenever they take damage, both resets the collision
+            // and looks neat ;p though breaks if the player somehow lands flat without
+            // bouncing (hits their head or something).
+            hit.collider.GetComponent<Rigidbody>().AddForce(hit.transform.up * 125, ForceMode.Force);
         }
     }
 

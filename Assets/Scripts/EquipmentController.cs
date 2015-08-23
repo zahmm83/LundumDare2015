@@ -22,7 +22,7 @@ public class EquipmentController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (equipedGearMain != null && Input.GetMouseButtonDown(0))
+        if (equipedGearMain != null && Input.GetMouseButtonDown(0) && this.GetComponent<StatsController>().isNotDead)
         {
             WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();
             mainWeapon.FireWeapon(this.gameObject);
@@ -31,6 +31,12 @@ public class EquipmentController : MonoBehaviour {
 
     public void PickupGear(GameObject gear)
     {
+        if (this.GetComponent<StatsController>().isDead)
+        {
+            // Dead people don't get weapons..
+            return;        
+        }
+
         if(equipedGearMain != null)
         {
             Destroy(equipedGearMain);
