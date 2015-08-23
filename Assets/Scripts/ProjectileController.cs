@@ -8,7 +8,7 @@ public class ProjectileController : MonoBehaviour {
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
     protected float speed = 15.0f;
-    protected float force = 200.0f;
+    protected float force = 1000.0f;
 
     // Trajectory control variables
     protected Vector3 startingPosition = Vector3.zero; // regular coordinates
@@ -24,11 +24,11 @@ public class ProjectileController : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        this.timer += Time.deltaTime;
+        timer += Time.deltaTime;
         
-        if (this.timer > lifeTime)
+        if (timer > lifeTime)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -47,8 +47,8 @@ public class ProjectileController : MonoBehaviour {
         Rigidbody target = hit.collider.GetComponent<Rigidbody>();
         if (target != null)
         {
-            target.AddForce(this.direction * this.force, ForceMode.Force);
-            Destroy(this.gameObject);
+            target.AddForce(direction * force, ForceMode.Force);
+            Destroy(gameObject);
         }
     }
 
@@ -59,48 +59,48 @@ public class ProjectileController : MonoBehaviour {
         // Clear out projectiles for weapons that have been destroyed.
         if(firedFrom == null)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
 
-        float distanceTraveled = Vector3.Distance(this.transform.position, this.startingPosition);
+        float distanceTraveled = Vector3.Distance(transform.position, startingPosition);
 
         if (distanceTraveled < relativeMidpoint.x)
         {
             // Move toward the mid point
             float percentageDistanceTraveled = 0;
-            if (this.relativeEndpoint.x - relativeMidpoint.x != 0)
+            if (relativeEndpoint.x - relativeMidpoint.x != 0)
             {
-                percentageDistanceTraveled = distanceTraveled / this.relativeMidpoint.x;
+                percentageDistanceTraveled = distanceTraveled / relativeMidpoint.x;
             }
             // Invert the arc by using 1-% instead of %
-            Vector3 heightAdjustment = this.firedFrom.transform.up * (1 - percentageDistanceTraveled) * relativeMidpoint.y;
-            Vector3 curveAdjustment = this.firedFrom.transform.right * (1 - percentageDistanceTraveled) * relativeMidpoint.z;
+            Vector3 heightAdjustment = firedFrom.transform.up * (1 - percentageDistanceTraveled) * relativeMidpoint.y;
+            Vector3 curveAdjustment = firedFrom.transform.right * (1 - percentageDistanceTraveled) * relativeMidpoint.z;
 
-            this.transform.position += ((this.direction + heightAdjustment + curveAdjustment) * this.speed * Time.deltaTime);
+            transform.position += ((direction + heightAdjustment + curveAdjustment) * speed * Time.deltaTime);
         }
         else
         {
             // Move toward the end point
             float percentageDistanceTraveled = 0;
-            if (this.relativeEndpoint.x - relativeMidpoint.x != 0)
+            if (relativeEndpoint.x - relativeMidpoint.x != 0)
             {
-                percentageDistanceTraveled = distanceTraveled / (this.relativeEndpoint.x - relativeMidpoint.x);
+                percentageDistanceTraveled = distanceTraveled / (relativeEndpoint.x - relativeMidpoint.x);
             }
             // Don't want to invert the arc on the way down
-            Vector3 heightAdjustment = this.firedFrom.transform.up * (percentageDistanceTraveled) * (relativeEndpoint.y - relativeMidpoint.y);
-            Vector3 curveAdjustment = this.firedFrom.transform.right * (percentageDistanceTraveled) * (relativeEndpoint.z - relativeMidpoint.z);
+            Vector3 heightAdjustment = firedFrom.transform.up * (percentageDistanceTraveled) * (relativeEndpoint.y - relativeMidpoint.y);
+            Vector3 curveAdjustment = firedFrom.transform.right * (percentageDistanceTraveled) * (relativeEndpoint.z - relativeMidpoint.z);
 
-            this.transform.position += ((this.direction + heightAdjustment + curveAdjustment) * this.speed * Time.deltaTime);
+            transform.position += ((direction + heightAdjustment + curveAdjustment) * speed * Time.deltaTime);
         }
     }
 
     // Default initialization, set the direction as weapon forward and position the same as the weapon.
     public virtual void Initialize(GameObject shooter)
     {
-        this.firedFrom = shooter;
-        this.startingPosition = firedFrom.transform.position;
-        this.direction = firedFrom.transform.forward;
+        firedFrom = shooter;
+        startingPosition = firedFrom.transform.position;
+        direction = firedFrom.transform.forward;
 
         var marker_list = shooter.transform.root.GetComponentsInChildren<Marker>();
         Marker spawn_loc = null;
@@ -109,6 +109,6 @@ public class ProjectileController : MonoBehaviour {
             if (marker.BoneType == "fire_spawn") { spawn_loc = marker; }
         }
 
-        this.transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.2f);
+        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.2f);
     }
 }

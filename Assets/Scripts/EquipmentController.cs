@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.Networking;
 using ObjectMarkup;
 
-public class EquipmentController : MonoBehaviour {
+public class EquipmentController : NetworkBehaviour {
 
     public GameObject startingGearMain;
     public GameObject startingGearSecondary;
@@ -11,8 +11,11 @@ public class EquipmentController : MonoBehaviour {
     public GameObject equipedGearMain;
     public GameObject equipedGearSecondary;
 
+    [SyncVar (hook = "Fire")]
+    bool fireWeapon;
+
     // Use this for initialization
-    void Start () {
+    void Awake () {
 	    if(startingGearMain != null)
         {
             GameObject instantiatedGear = Instantiate(startingGearMain);
@@ -22,16 +25,30 @@ public class EquipmentController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (equipedGearMain != null && Input.GetMouseButtonDown(0) && this.GetComponent<StatsController>().isNotDead)
+        if (equipedGearMain != null && Input.GetMouseButtonDown(0) && GetComponent<StatsController>().isNotDead)
         {
-            WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();
-            mainWeapon.FireWeapon(this.gameObject);
+            if (isLocalPlayer)
+            {
+                CmdTellServerYouAreShooting();
+            }
         }
 	}
 
+    [Command]
+    void CmdTellServerYouAreShooting()
+    {
+        fireWeapon = !fireWeapon;
+    }
+
+    void Fire(bool fireWeapon)
+    {
+        WeaponController mainWeapon = equipedGearMain.GetComponent<WeaponController>();
+        mainWeapon.FireWeapon(gameObject);
+    }
+
     public void PickupGear(GameObject gear)
     {
-        if (this.GetComponent<StatsController>().isDead)
+        if (GetComponent<StatsController>().isDead)
         {
             // Dead people don't get weapons..
             return;        
