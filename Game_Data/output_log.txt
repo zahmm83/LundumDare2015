@@ -24,21 +24,47 @@ desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2b64 -> priority: 1 
-  Thread -> id: 2118 -> priority: 1 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.949731 ms
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 902.
-Total: 0.405665 ms (FindLiveObjects: 0.041823 ms CreateObjectMapping: 0.022066 ms MarkObjects: 0.324839 ms  DeleteObjects: 0.016934 ms)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.635310 ms
-Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
+  Thread -> id: 1f1c -> priority: 1 
+  Thread -> id: 2584 -> priority: 1 
+HLAPI CRC channel count error local: 3 remote: 4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+CRC Local Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 385.
-Total: 0.221948 ms (FindLiveObjects: 0.009237 ms CreateObjectMapping: 0.011803 ms MarkObjects: 0.192184 ms  DeleteObjects: 0.008723 ms)
+CRC Local Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+UnloadTime: 1.895156 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 660.
+Total: 0.362045 ms (FindLiveObjects: 0.029250 ms CreateObjectMapping: 0.026428 ms MarkObjects: 0.288661 ms  DeleteObjects: 0.017447 ms)
 

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Linq;
 
 public class StatsController : NetworkBehaviour {
 
@@ -31,9 +32,11 @@ public class StatsController : NetworkBehaviour {
 
     [SyncVar]
     public int playerScore = 1000;
+    public List<string> playersWhoHitMe = new List<string>();
 
-
-    void Start () {
+    // Built in functions
+    void Start ()
+    {
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
 	}
@@ -63,7 +66,22 @@ public class StatsController : NetworkBehaviour {
         }
     }
 
+    // Score Functions
+    public void AddPlayerHitId(string playerId)
+    {
+        if (isLocalPlayer)
+        {
+            CmdInformServerWhoHit(playerId);
+        }
+    }
 
+    [Command]
+    void CmdInformServerWhoHit(string playerId)
+    {
+        playersWhoHitMe.Add(playerId);
+    }
+
+    // Death Functions
     void CheckDeathCondition()
     {
         if (health <= 0 && isNotDead && shouldNotDie)
@@ -71,6 +89,19 @@ public class StatsController : NetworkBehaviour {
             if (EventDie != null)
             {
                 playerScore -= 100;
+                if (isServer)
+                {
+                    float numberOfHitters = playersWhoHitMe.Count;
+                    List<string> distinctHitters = playersWhoHitMe.Distinct().ToList();
+                    foreach(string hitter in distinctHitters)
+                    {
+                        float numberOfHits = playersWhoHitMe.Where(id => id == hitter).ToList().Count;
+                        float scorePercentage = numberOfHits / numberOfHitters;
+                        int scoreChange = (int)Mathf.Ceil(scorePercentage * 100);
+                        GameObject player = GameObject.Find(hitter);
+                        player.GetComponent<StatsController>().playerScore += scoreChange;
+                    }
+                }
                 EventDie();
             }
         }
@@ -87,7 +118,8 @@ public class StatsController : NetworkBehaviour {
             }
         }
     }
-
+    
+    // Respawn Functions
     void RespawnUpdate()
     {
         respawnTimer += Time.deltaTime;
@@ -98,7 +130,8 @@ public class StatsController : NetworkBehaviour {
             CheckRespawnCondition();
         }
     }
-
+    
+    // Damage and health Functions
     public void InformServerAboutDamage(int damage)
     {
         if (isLocalPlayer)

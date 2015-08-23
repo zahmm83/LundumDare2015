@@ -9,6 +9,7 @@ public class WeaponController : MonoBehaviour {
     public virtual void FireWeapon(GameObject shooter)
     {
         GameObject firedShot = Instantiate(projectile);
+        firedShot.GetComponent<ProjectileController>().shooterId = shooter.name;
         firedShot.GetComponent<ProjectileController>().Initialize(shooter);
     }
 }
