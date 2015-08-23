@@ -5,6 +5,8 @@ using System.Collections;
 
 public class GameNetworkManager : NetworkManager
 {
+    public string playerName; 
+
     public void StartupHost()
     {
         SetPort();
@@ -16,14 +18,20 @@ public class GameNetworkManager : NetworkManager
         SetIPAddress();
         SetPort();
         if (NetworkManager.singleton.networkAddress.Length > 0)
+        {
             NetworkManager.singleton.StartClient();
+        }
+    }
+
+    public void SetPlayerName()
+    {
+        playerName = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
     }
 
     private void SetIPAddress()
     {
         string ipAddress = GameObject.Find("InputIPAddress").transform.FindChild("Text").GetComponent<Text>().text;
-        if (ipAddress != null || ipAddress.Length > 0)
-            NetworkManager.singleton.networkAddress = ipAddress;
+        NetworkManager.singleton.networkAddress = ipAddress;
     }
 
     private void SetPort()
@@ -33,7 +41,7 @@ public class GameNetworkManager : NetworkManager
 
     void OnLevelWasLoaded (int level)
     {
-        //Menu has to always has to have the index 0
+        //Menu has to always has to have the index 0 in build settings
         if (level == 0)
         {
             SetupMenuSceneButton();
@@ -51,6 +59,9 @@ public class GameNetworkManager : NetworkManager
 
         GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.AddListener(JoinGame);
+
+        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(SetPlayerName);
     }
 
     void SetupGameSceneButton()
