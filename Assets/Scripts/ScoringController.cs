@@ -28,10 +28,11 @@ public class ScoringController : NetworkBehaviour {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
+            PlayerManager playerManager = player.GetComponent<PlayerManager>();
             StatsController playerStats = player.GetComponent<StatsController>();
-            if(playerStats != null)
+            if (playerStats != null && playerManager != null)
             {
-                text += player.name + " - " + playerStats.playerScore + "\n";
+                text += playerManager.playerName + " - " + playerStats.playerScore + "\n";
             }
         }
 

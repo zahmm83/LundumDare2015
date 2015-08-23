@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 3de65eda491ea244093b399475c900e5
+timeCreated: 1440354263
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: b_ankle_l
+    100002: b_ankle_r
+    100004: b_armL_l
+    100006: b_armL_r
+    100008: b_armU_l
+    100010: b_armU_ltwist01
+    100012: b_armU_ltwist02
+    100014: b_armU_r
+    100016: b_armU_rtwist01
+    100018: b_armU_rtwist02
+    100020: b_clav_l
+    100022: b_clav_r
+    100024: b_cog
+    100026: b_fire_loc
+    100028: b_grip_l
+    100030: b_grip_r
+    100032: b_hand_l
+    100034: b_hand_ltwist01
+    100036: b_hand_ltwist02
+    100038: b_hand_ltwist03
+    100040: b_hand_r
+    100042: b_hand_rtwist01
+    100044: b_hand_rtwist02
+    100046: b_hand_rtwist03
+    100048: b_legL_l
+    100050: b_legU_l
+    100052: b_legU_ltwist01
+    100054: b_legU_ltwist02
+    100056: b_neck
+    100058: b_regL_r
+    100060: b_regU_r
+    100062: b_regU_rtwist01
+    100064: b_regU_rtwist02
+    100066: b_skull
+    100068: b_spine01
+    100070: b_spine02
+    100072: b_spine03
+    100074: b_spine04
+    100076: b_tail01
+    100078: b_tail02
+    100080: b_tail03
+    100082: b_tail04
+    100084: b_toes_l
+    100086: b_toes_r
+    100088: char01_0
+    100090: grp_geo
+    100092: //RootNode
+    100094: world_root
+    400000: b_ankle_l
+    400002: b_ankle_r
+    400004: b_armL_l
+    400006: b_armL_r
+    400008: b_armU_l
+    400010: b_armU_ltwist01
+    400012: b_armU_ltwist02
+    400014: b_armU_r
+    400016: b_armU_rtwist01
+    400018: b_armU_rtwist02
+    400020: b_clav_l
+    400022: b_clav_r
+    400024: b_cog
+    400026: b_fire_loc
+    400028: b_grip_l
+    400030: b_grip_r
+    400032: b_hand_l
+    400034: b_hand_ltwist01
+    400036: b_hand_ltwist02
+    400038: b_hand_ltwist03
+    400040: b_hand_r
+    400042: b_hand_rtwist01
+    400044: b_hand_rtwist02
+    400046: b_hand_rtwist03
+    400048: b_legL_l
+    400050: b_legU_l
+    400052: b_legU_ltwist01
+    400054: b_legU_ltwist02
+    400056: b_neck
+    400058: b_regL_r
+    400060: b_regU_r
+    400062: b_regU_rtwist01
+    400064: b_regU_rtwist02
+    400066: b_skull
+    400068: b_spine01
+    400070: b_spine02
+    400072: b_spine03
+    400074: b_spine04
+    400076: b_tail01
+    400078: b_tail02
+    400080: b_tail03
+    400082: b_tail04
+    400084: b_toes_l
+    400086: b_toes_r
+    400088: char01_0
+    400090: grp_geo
+    400092: //RootNode
+    400094: world_root
+    4300000: char01_0
+    7400000: ua_idle_to_run
+    7400002: ua_run
+    9500000: //RootNode
+    13700000: char01_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ua_idle_to_run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 1
+      maskSource: {fileID: 101100000, guid: 83980dcf7eccea144b141106170f75b6, type: 2}
+    - serializedVersion: 16
+      name: ua_run
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: grp_geo
+        weight: 0
+      - path: grp_geo/char01_0
+        weight: 0
+      - path: world_root
+        weight: 1
+      - path: world_root/b_cog
+        weight: 1
+      - path: world_root/b_cog/b_spine01
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l/b_ankle_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legL_l/b_ankle_l/b_toes_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legU_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_legU_l/b_legU_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_regU_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r/b_ankle_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regL_r/b_ankle_r/b_toes_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regU_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_regU_r/b_regU_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_l
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_l/b_grip_l
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armL_l/b_hand_ltwist03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armU_ltwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_l/b_armU_l/b_armU_ltwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_r
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_r/b_grip_r
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armL_r/b_hand_rtwist03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armU_rtwist01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_clav_r/b_armU_r/b_armU_rtwist02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_neck
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_spine02/b_spine03/b_spine04/b_neck/b_skull
+        weight: 1
+      - path: world_root/b_cog/b_spine01/b_tail01
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02/b_tail03
+        weight: 0
+      - path: world_root/b_cog/b_spine01/b_tail01/b_tail02/b_tail03/b_tail04
+        weight: 0
+      - path: world_root/b_fire_loc
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: world_root
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9517e3e1b945cd34c80a5169cfa82972,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
