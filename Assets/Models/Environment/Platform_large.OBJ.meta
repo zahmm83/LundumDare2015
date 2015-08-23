@@ -7,11 +7,26 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Group30122
     100002: //RootNode
+    100004: Group1
+    100006: Group2
+    100008: ZBrush_defualt_group
     400000: Group30122
     400002: //RootNode
+    400004: Group1
+    400006: Group2
+    400008: ZBrush_defualt_group
     2300000: Group30122
+    2300002: Group1
+    2300004: Group2
+    2300006: ZBrush_defualt_group
     3300000: Group30122
+    3300002: Group1
+    3300004: Group2
+    3300006: ZBrush_defualt_group
     4300000: Group30122
+    4300002: Group1
+    4300004: Group2
+    4300006: ZBrush_defualt_group
   materials:
     importMaterials: 1
     materialName: 0
