@@ -7,11 +7,16 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Group20883
     100002: //RootNode
+    100004: Group29494
     400000: Group20883
     400002: //RootNode
+    400004: Group29494
     2300000: Group20883
+    2300002: Group29494
     3300000: Group20883
+    3300002: Group29494
     4300000: Group20883
+    4300002: Group29494
   materials:
     importMaterials: 1
     materialName: 0

@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     public float jumpHeight = 20;
     public float maxVelocityChange = 5;
     public Transform playerCamera;
+    public Animator anim;
 
     public float groundedDetectionLength = 0.25f;
 
@@ -18,7 +19,6 @@ public class CharacterMovement : MonoBehaviour
     private float xPos;
     private float yPos;
     private Vector3 targetVelocity;
-    private Animator anim;
 
     void Start()
     {
@@ -54,8 +54,13 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
 
-        anim.SetFloat("speed", playerRigidbody.velocity.magnitude);
-        anim.speed = Mathf.Clamp((playerRigidbody.velocity.magnitude/3), 1, 3);
+
+        anim.SetBool("falling", (0 > playerRigidbody.velocity.y) && !grounded);
+        anim.SetBool("grounded", grounded);
+        var linear_vector = new Vector3(playerRigidbody.velocity.x, 0, playerRigidbody.velocity.z);
+        anim.SetFloat("speed", linear_vector.magnitude);
+        anim.SetFloat("height", playerRigidbody.velocity.y);
+        anim.speed = Mathf.Clamp((playerRigidbody.velocity.magnitude/2), 1, 3);
     }
 
     void FixedUpdate()
