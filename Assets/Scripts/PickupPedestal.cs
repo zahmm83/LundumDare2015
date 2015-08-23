@@ -50,9 +50,7 @@ public class PickupPedestal : NetworkBehaviour {
         if (isServer)
         {
             int randomIndex = Random.Range(0, potentialGear.Count);
-            indexConnectedGear = randomIndex;
-
-            CmdGetConnectedGear(indexConnectedGear);
+            CmdGetConnectedGear(randomIndex);
         }
     }
 

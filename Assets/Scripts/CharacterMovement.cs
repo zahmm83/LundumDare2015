@@ -35,10 +35,7 @@ public class CharacterMovement : MonoBehaviour
 
         var raycast_position = transform.position;
         raycast_position.y += 0.1f;
-        if (Physics.Raycast(raycast_position, -transform.up, 0.25f))
-            grounded = true;
-        else
-            grounded = false;
+        grounded = Physics.Raycast(raycast_position, -transform.up, 0.25f);
 
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
