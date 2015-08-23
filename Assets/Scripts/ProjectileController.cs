@@ -7,8 +7,8 @@ public class ProjectileController : MonoBehaviour {
 
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
-    protected float speed = 15.0f;
-    protected float force = 1000.0f;
+    public float speed = 15.0f;
+    public float force = 10000.0f;
 
     // Trajectory control variables
     protected Vector3 startingPosition = Vector3.zero; // regular coordinates
@@ -18,9 +18,10 @@ public class ProjectileController : MonoBehaviour {
     protected GameObject firedFrom;
 
     // Despawn variables
-    float lifeTime = 10.0f;
+    public float lifeTime = 10.0f;
     float timer = 0.0f;
 
+    public string shooterId = "";
 
     void FixedUpdate ()
     {
@@ -39,6 +40,13 @@ public class ProjectileController : MonoBehaviour {
 
     void OnCollisionEnter(Collision hit)
     {
+        StatsController playerStats = hit.gameObject.GetComponent<StatsController>();
+        if (playerStats != null)
+        {
+            playerStats.AddPlayerHitId(shooterId);
+        }
+
+        // Always handle collision, even if not hitting a player.
         HandleCollision(hit);
     }
 
@@ -109,6 +117,6 @@ public class ProjectileController : MonoBehaviour {
             if (marker.BoneType == "fire_spawn") { spawn_loc = marker; }
         }
 
-        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.2f);
+        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.3f);
     }
 }

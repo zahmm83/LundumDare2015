@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Linq;
 
 public class StatsController : NetworkBehaviour {
 
@@ -23,13 +24,31 @@ public class StatsController : NetworkBehaviour {
     float respawnTime = 10.0f;
     float respawnTimer = 0.0f;
 
-    void Start () {
+    float lavaImmunityDuration = 0.5f;
+    float lavaImmunityTimer = 0.0f;
+    bool immuneToLava = false;
+    int lavaDamage = 50;
+    
+
+    [SyncVar]
+    public int playerScore = 1000;
+    public List<string> playersWhoHitMe = new List<string>();
+
+    // Built in functions
+    void Start ()
+    {
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
 	}
 	
     void Update()
     {
+        if(immuneToLava)
+        {
+            lavaImmunityTimer += Time.deltaTime;
+            immuneToLava = lavaImmunityTimer < lavaImmunityDuration;
+        }
+
         CheckDeathCondition();
         if (isDead)
         {
@@ -37,12 +56,52 @@ public class StatsController : NetworkBehaviour {
         }
     }
 
+    void OnTriggerStay()
+    {
+        if (!immuneToLava)
+        {
+            InformServerAboutDamage(lavaDamage);
+            lavaImmunityTimer = 0.0f;
+            immuneToLava = true;
+        }
+    }
+
+    // Score Functions
+    public void AddPlayerHitId(string playerId)
+    {
+        if (isLocalPlayer)
+        {
+            CmdInformServerWhoHit(playerId);
+        }
+    }
+
+    [Command]
+    void CmdInformServerWhoHit(string playerId)
+    {
+        playersWhoHitMe.Add(playerId);
+    }
+
+    // Death Functions
     void CheckDeathCondition()
     {
         if (health <= 0 && isNotDead && shouldNotDie)
         {
             if (EventDie != null)
             {
+                playerScore -= 100;
+                if (isServer)
+                {
+                    float numberOfHitters = playersWhoHitMe.Count;
+                    List<string> distinctHitters = playersWhoHitMe.Distinct().ToList();
+                    foreach(string hitter in distinctHitters)
+                    {
+                        float numberOfHits = playersWhoHitMe.Where(id => id == hitter).ToList().Count;
+                        float scorePercentage = numberOfHits / numberOfHitters;
+                        int scoreChange = (int)Mathf.Ceil(scorePercentage * 100);
+                        GameObject player = GameObject.Find(hitter);
+                        player.GetComponent<StatsController>().playerScore += scoreChange;
+                    }
+                }
                 EventDie();
             }
         }
@@ -59,7 +118,8 @@ public class StatsController : NetworkBehaviour {
             }
         }
     }
-
+    
+    // Respawn Functions
     void RespawnUpdate()
     {
         respawnTimer += Time.deltaTime;
@@ -70,7 +130,8 @@ public class StatsController : NetworkBehaviour {
             CheckRespawnCondition();
         }
     }
-
+    
+    // Damage and health Functions
     public void InformServerAboutDamage(int damage)
     {
         if (isLocalPlayer)

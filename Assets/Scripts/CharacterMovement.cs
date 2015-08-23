@@ -62,6 +62,7 @@ public class CharacterMovement : MonoBehaviour
     {
         targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         targetVelocity = transform.TransformDirection(targetVelocity);
+        targetVelocity = Vector3.Normalize(targetVelocity);
         targetVelocity *= speed;
 
         Vector3 velocity = playerRigidbody.velocity;
@@ -75,7 +76,9 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
+            // Don't change velocity, just push the character in the forward direction.
             velocityChange = Vector3.zero;
+            playerRigidbody.AddForce(transform.forward * 2.0f, ForceMode.Force);
         }
 
 
