@@ -20,7 +20,7 @@ Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\
 Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+- Completed reload, in  0.046 seconds
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -28,11 +28,67 @@ desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 21b4 -> priority: 1 
-  Thread -> id: 2058 -> priority: 1 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.834088 ms
+  Thread -> id: 1f2c -> priority: 1 
+  Thread -> id: 22d8 -> priority: 1 
+HLAPI CRC channel count error local: 4 remote: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 923.
-Total: 0.337925 ms (FindLiveObjects: 0.033612 ms CreateObjectMapping: 0.020527 ms MarkObjects: 0.276344 ms  DeleteObjects: 0.006927 ms)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+CRC Local Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+UnloadTime: 2.179455 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 741.
+Total: 0.481358 ms (FindLiveObjects: 0.037461 ms CreateObjectMapping: 0.061067 ms MarkObjects: 0.374874 ms  DeleteObjects: 0.007441 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EquipmentController.Fire (Boolean fireWeapon) [0x00000] in <filename unknown>:0 
+  at EquipmentController.OnDeserialize (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkIdentity.OnUpdateVars (UnityEngine.Networking.NetworkReader reader, Boolean initialState) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.ClientScene.OnUpdateVarsMessage (UnityEngine.Networking.NetworkMessage netMsg) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkConnection.HandleMessage (System.Collections.Generic.Dictionary`2 handler, UnityEngine.Networking.NetworkReader reader, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkClient.Update () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkClient.UpdateClients () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Networking.NetworkIdentity.UNetStaticUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 

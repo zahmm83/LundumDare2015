@@ -76,6 +76,12 @@ public class GameNetworkManager : NetworkManager
 
         GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(SetPlayerName);
+
+        GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.RemoveAllListeners();
+        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
+
+        GameObject.Find("ButtonCharacter2").GetComponent<Button>().onClick.RemoveAllListeners();
+        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
     }
 
     void SetupGameSceneButton()
