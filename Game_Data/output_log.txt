@@ -6,27 +6,63 @@ Direct3D:
     Vendor:   ATI
     VRAM:     2022 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
-desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1f1c -> priority: 1 
-  Thread -> id: 2584 -> priority: 1 
-HLAPI CRC channel count error local: 3 remote: 4
+  Thread -> id: 1e98 -> priority: 1 
+  Thread -> id: 1cbc -> priority: 1 
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD RADEON R9 M290X (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2022 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.039 seconds
+desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\lenzm00\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2728 -> priority: 1 
+  Thread -> id: 1d38 -> priority: 1 
+HLAPI CRC channel count error local: 4 remote: 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -39,6 +75,10 @@ CRC Local Dump StatsController : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
+CRC Local Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
 CRC Local Dump CharacterId : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
@@ -47,11 +87,15 @@ CRC Local Dump PickupPedestal : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
+CRC Remote Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
 CRC Remote Dump CharacterId : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-CRC Remote Dump StatsController : 0
+CRC Remote Dump PlayerManager : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -63,8 +107,58 @@ CRC Remote Dump PickupPedestal : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-UnloadTime: 1.895156 ms
+UnloadTime: 1.924663 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 660.
-Total: 0.362045 ms (FindLiveObjects: 0.029250 ms CreateObjectMapping: 0.026428 ms MarkObjects: 0.288661 ms  DeleteObjects: 0.017447 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 671.
+Total: 0.355887 ms (FindLiveObjects: 0.023349 ms CreateObjectMapping: 0.021553 ms MarkObjects: 0.294819 ms  DeleteObjects: 0.015908 ms)
+
+HLAPI CRC channel count error local: 4 remote: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+CRC Local Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+UnloadTime: 2.293380 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 671.
+Total: 0.366407 ms (FindLiveObjects: 0.025915 ms CreateObjectMapping: 0.035409 ms MarkObjects: 0.287891 ms  DeleteObjects: 0.016421 ms)
 
