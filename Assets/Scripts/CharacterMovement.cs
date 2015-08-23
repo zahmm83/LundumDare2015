@@ -29,10 +29,14 @@ public class CharacterMovement : MonoBehaviour
         gameObject.transform.localRotation = Quaternion.AngleAxis(xPos, Vector3.up);
         playerCamera.localRotation = Quaternion.AngleAxis(yPos, Vector3.right);
 
-        if (Physics.Raycast(transform.position, -transform.up, 1.125f))
+        var raycast_position = transform.position;
+        raycast_position.y += 0.1f;
+        if (Physics.Raycast(raycast_position, -transform.up, 0.25f))
             grounded = true;
         else
             grounded = false;
+
+        Debug.Log(grounded);
 
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
@@ -46,9 +50,19 @@ public class CharacterMovement : MonoBehaviour
 
         Vector3 velocity = playerRigidbody.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
-        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-        velocityChange.y = 0;
+        
+        if (grounded)
+        {
+            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+            velocityChange.y = 0;
+        }
+        else
+        {
+            velocityChange = Vector3.zero;
+        }
+
+
         playerRigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
     }
 }
