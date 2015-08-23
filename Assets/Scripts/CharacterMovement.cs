@@ -15,10 +15,14 @@ public class CharacterMovement : MonoBehaviour
     private float xPos;
     private float yPos;
     private Vector3 targetVelocity;
+    private Animator anim;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        if (anim.layerCount == 2)
+            anim.SetLayerWeight(1, 1);
     }
 
     void Update()
@@ -36,10 +40,11 @@ public class CharacterMovement : MonoBehaviour
         else
             grounded = false;
 
-        Debug.Log(grounded);
-
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
+
+        anim.SetFloat("speed", playerRigidbody.velocity.magnitude);
+        anim.speed = Mathf.Clamp((playerRigidbody.velocity.magnitude/3), 1, 3);
     }
 
     void FixedUpdate()
