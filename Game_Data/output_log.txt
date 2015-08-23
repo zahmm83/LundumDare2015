@@ -16,7 +16,7 @@ Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\U
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.042 seconds
+- Completed reload, in  0.047 seconds
 desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,17 +24,21 @@ desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 326c -> priority: 1 
-  Thread -> id: 2698 -> priority: 1 
-Trying to send command for non-local player.
+  Thread -> id: 2b64 -> priority: 1 
+  Thread -> id: 2118 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.949731 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 902.
+Total: 0.405665 ms (FindLiveObjects: 0.041823 ms CreateObjectMapping: 0.022066 ms MarkObjects: 0.324839 ms  DeleteObjects: 0.016934 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.635310 ms
+Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Trying to send command for non-local player.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Trying to send command for non-local player.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 385.
+Total: 0.221948 ms (FindLiveObjects: 0.009237 ms CreateObjectMapping: 0.011803 ms MarkObjects: 0.192184 ms  DeleteObjects: 0.008723 ms)
 

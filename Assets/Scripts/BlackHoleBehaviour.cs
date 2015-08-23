@@ -17,25 +17,25 @@ public class BlackHoleBehaviour : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        this.pulseTimer += Time.deltaTime;
-        if (this.pulseTimer > this.pulseFrequency)
+        pulseTimer += Time.deltaTime;
+        if (pulseTimer > pulseFrequency)
         {
-            this.pulseTimer = 0.0f;
-            List<Collider> targetColliders = Physics.OverlapSphere(this.transform.position, pullRadius).ToList();
+            pulseTimer = 0.0f;
+            List<Collider> targetColliders = Physics.OverlapSphere(transform.position, pullRadius).ToList();
             foreach (Collider collider in targetColliders)
             {
                 Rigidbody target = collider.GetComponent<Rigidbody>();
                 if (target != null)
                 {
-                    target.AddExplosionForce(this.force, this.transform.position, pullRadius);
+                    target.AddExplosionForce(force, transform.position, pullRadius);
                 }
             }
         }
 
-        this.lifeTimer += Time.deltaTime;
-        if (this.lifeTimer > this.lifeTime)
+        lifeTimer += Time.deltaTime;
+        if (lifeTimer > lifeTime)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         
 

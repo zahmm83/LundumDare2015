@@ -10,6 +10,9 @@ public class CharacterMovement : MonoBehaviour
     public float jumpHeight = 20;
     public float maxVelocityChange = 5;
     public Transform playerCamera;
+
+    public float groundedDetectionLength = 0.25f;
+
     private Rigidbody playerRigidbody;
     private bool grounded = false;
     private float xPos;
@@ -35,7 +38,18 @@ public class CharacterMovement : MonoBehaviour
 
         var raycast_position = transform.position;
         raycast_position.y += 0.1f;
-        grounded = Physics.Raycast(raycast_position, -transform.up, 0.25f);
+
+        bool objectIsDirectlyBelow = Physics.Raycast(raycast_position, -transform.up, groundedDetectionLength);
+        bool objectIsFrontRight = Physics.Raycast(raycast_position, transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackRight = Physics.Raycast(raycast_position, -transform.forward + transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsBackLeft = Physics.Raycast(raycast_position, -transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
+        bool objectIsFrontLeft = Physics.Raycast(raycast_position, transform.forward - transform.right - transform.up, groundedDetectionLength * 1.2f);
+        
+        grounded = objectIsDirectlyBelow
+                || objectIsFrontRight
+                || objectIsBackRight
+                || objectIsBackLeft
+                || objectIsFrontLeft;
 
         if (Input.GetButtonDown("Jump") && grounded)
             playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, jumpHeight, playerRigidbody.velocity.z);
@@ -48,6 +62,7 @@ public class CharacterMovement : MonoBehaviour
     {
         targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         targetVelocity = transform.TransformDirection(targetVelocity);
+        targetVelocity = Vector3.Normalize(targetVelocity);
         targetVelocity *= speed;
 
         Vector3 velocity = playerRigidbody.velocity;
@@ -61,7 +76,9 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
+            // Don't change velocity, just push the character in the forward direction.
             velocityChange = Vector3.zero;
+            playerRigidbody.AddForce(transform.forward * 2.0f, ForceMode.Force);
         }
 
 

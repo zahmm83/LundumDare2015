@@ -23,6 +23,16 @@ public class StatsController : NetworkBehaviour {
     float respawnTime = 10.0f;
     float respawnTimer = 0.0f;
 
+    float lavaImmunityDuration = 0.5f;
+    float lavaImmunityTimer = 0.0f;
+    bool immuneToLava = false;
+    int lavaDamage = 50;
+    
+
+    [SyncVar]
+    public int playerScore = 1000;
+
+
     void Start () {
         healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
@@ -30,6 +40,12 @@ public class StatsController : NetworkBehaviour {
 	
     void Update()
     {
+        if(immuneToLava)
+        {
+            lavaImmunityTimer += Time.deltaTime;
+            immuneToLava = lavaImmunityTimer < lavaImmunityDuration;
+        }
+
         CheckDeathCondition();
         if (isDead)
         {
@@ -37,12 +53,24 @@ public class StatsController : NetworkBehaviour {
         }
     }
 
+    void OnTriggerStay()
+    {
+        if (!immuneToLava)
+        {
+            InformServerAboutDamage(lavaDamage);
+            lavaImmunityTimer = 0.0f;
+            immuneToLava = true;
+        }
+    }
+
+
     void CheckDeathCondition()
     {
         if (health <= 0 && isNotDead && shouldNotDie)
         {
             if (EventDie != null)
             {
+                playerScore -= 100;
                 EventDie();
             }
         }
