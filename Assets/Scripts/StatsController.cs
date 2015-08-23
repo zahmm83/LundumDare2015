@@ -9,18 +9,75 @@ public class StatsController : NetworkBehaviour {
     public int health = 500;
     Text healthText;
 
-    //private bool shouldDie = false;
-    //public bool isDead = false;
+    bool shouldDie = false;
+    bool shouldNotDie { get { return !shouldDie; } }
+    public bool isDead = false;
+    public bool isNotDead { get { return !isDead; } }
 
-    //public delegate void DieDelegate();
-    //public event DieDelegate EventDie;
-    
+    public delegate void DieDelegate();
+    public event DieDelegate EventDie;
 
-	void Start () {
-        this.healthText = GameObject.Find("Health Text").GetComponent<Text>();
+    public delegate void RespawnDelegate();
+    public event RespawnDelegate EventRespawn;
+
+    float respawnTime = 10.0f;
+    float respawnTimer = 0.0f;
+
+    void Start () {
+        healthText = GameObject.Find("Health Text").GetComponent<Text>();
         SetHealthText();
 	}
 	
+    void Update()
+    {
+        CheckDeathCondition();
+        if (isDead)
+        {
+            RespawnUpdate();
+        }
+    }
+
+    void CheckDeathCondition()
+    {
+        if (health <= 0 && isNotDead && shouldNotDie)
+        {
+            if (EventDie != null)
+            {
+                EventDie();
+            }
+        }
+    }
+
+    void CheckRespawnCondition()
+    {
+        if (health > 0 && isDead)
+        {
+            if (EventRespawn != null)
+            {
+                respawnTimer = 0.0f;
+                EventRespawn();
+            }
+        }
+    }
+
+    void RespawnUpdate()
+    {
+        respawnTimer += Time.deltaTime;
+        SetHealthText();
+        if(respawnTimer > respawnTime)
+        {
+            CmdRespawnOnServer();
+            CheckRespawnCondition();
+        }
+    }
+
+    public void InformServerAboutDamage(int damage)
+    {
+        if (isLocalPlayer)
+        {
+            CmdTellServerYouTookDamage(damage);
+        }
+    }
 
     void OnHealthChange(int health)
     {
@@ -28,46 +85,25 @@ public class StatsController : NetworkBehaviour {
         SetHealthText();
     }
 
-
     void SetHealthText()
     {
         if (isLocalPlayer)
         {
-            this.healthText.text = "Health: " + this.health.ToString();
+            healthText.text = health > 0? "Health: " + health.ToString() : "Respawning in " + Mathf.Ceil(respawnTime - respawnTimer);
         }
     }
-
-    public void InformServerAboutDamage(int damage)
-    {
-        //this.health -= damage;
-        if (isLocalPlayer)
-        {
-            CmdTellServerYouTookDamage(this.name, damage);
-        }
-
-        //SetHealthText();
-
-        //if (this.health <= 0)
-        //{
-        //    CmdTellServerYouDied(this.gameObject);
-        //}
-    }
-
-    void TakeDamage(int damage)
-    {
-        this.health -= damage;
-    }
-
-    //public void PlayerDied()
-    //{
-    //    Debug.Log("Hey now, you're supposed to be dead... stop running around.");
-    //}
+    
 
     [Command]
-    void CmdTellServerYouTookDamage(string uniqueId, int damage)
+    void CmdTellServerYouTookDamage(int damage)
     {
-        GameObject player = GameObject.Find(uniqueId);
-        player.GetComponent<StatsController>().TakeDamage(damage);
+        health -= damage;
+    }
+    
+    [Command]
+    void CmdRespawnOnServer()
+    {
+        health = 500;
     }
 
 }

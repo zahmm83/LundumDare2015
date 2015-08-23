@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LavaController : MonoBehaviour {
 
-    int damage = 20;
+    int damage = 100;
 
 	// Use this for initialization
 	void Start () {
