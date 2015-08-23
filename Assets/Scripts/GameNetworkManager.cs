@@ -5,7 +5,8 @@ using System.Collections;
 
 public class GameNetworkManager : NetworkManager
 {
-    public string playerName; 
+    public string playerName = "Player";
+    public string playerCharacter = "triceratops";
 
     public void StartupHost()
     {
@@ -26,6 +27,19 @@ public class GameNetworkManager : NetworkManager
     public void SetPlayerName()
     {
         playerName = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
+    }
+
+    public void SetCharacterSelection(Button button)
+    {
+        GameObject.Find("ButtonCharacter1").GetComponent<Image>().color = Color.white;
+        GameObject.Find("ButtonCharacter2").GetComponent<Image>().color = Color.white;
+
+        button.GetComponent<Image>().color = Color.magenta;
+
+        if (button.name.Equals("ButtonCharacter1"))
+            playerCharacter = "triceratops";
+        if (button.name.Equals("ButtonCharacter2"))
+            playerCharacter = "monster";
     }
 
     private void SetIPAddress()

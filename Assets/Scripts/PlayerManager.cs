@@ -8,14 +8,16 @@ public class PlayerManager : NetworkBehaviour
     [SerializeField]
     private GameObject player;
     public bool isLocal = false;
-    [SyncVar(hook = "LogChange")]
+    [SyncVar(hook = "NameChange")]
     public string playerName;
+    public string playerCharacter;
     private bool showDisconnectMenu = false;
 
 	void Start ()
     {
         if (isLocalPlayer)
         {
+            playerCharacter = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerCharacter;
             playerName = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerName;
             transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
             CmdGiveServerPlayerName(playerName);
@@ -63,18 +65,13 @@ public class PlayerManager : NetworkBehaviour
         }
     }
 
-    public string GetPlayerName()
-    {
-        return playerName;
-    }
-
     [Command]
     void CmdGiveServerPlayerName(string name)
     {
         playerName = name;
     }
 
-    void LogChange(string name)
+    void NameChange(string name)
     {
         playerName = name;
         transform.FindChild("PlayerNameCanvas").transform.FindChild("Text").GetComponent<Text>().text = name;
