@@ -32,7 +32,7 @@ public class ScoringController : NetworkBehaviour {
             StatsController playerStats = player.GetComponent<StatsController>();
             if (playerStats != null && playerManager != null)
             {
-                text += playerManager.playerName + " - " + playerStats.playerScore + "\n";
+                text += playerManager.playerName + ": " + playerStats.playerScore + "\n";
             }
         }
 

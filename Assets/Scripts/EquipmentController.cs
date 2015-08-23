@@ -13,7 +13,10 @@ public class EquipmentController : NetworkBehaviour {
 
     [SyncVar (hook = "Fire")]
     bool fireWeapon;
-    
+    bool canFire = true;
+
+    float weaponCooldownTimer = 0.0f;
+
     // Poor Michael :(
     void Awake () {
 	    if(startingGearMain != null)
@@ -24,12 +27,25 @@ public class EquipmentController : NetworkBehaviour {
 	}
 	
 	void Update () {
-        if (equipedGearMain != null && Input.GetMouseButtonDown(0) && GetComponent<StatsController>().isNotDead)
+        if (!canFire)
         {
-            if (isLocalPlayer)
+            weaponCooldownTimer += Time.deltaTime;
+            WeaponController weaponController = equipedGearMain.GetComponent<WeaponController>();
+            if(weaponController != null && weaponCooldownTimer > weaponController.cooldown)
             {
-                CmdTellServerYouAreShooting();
+                canFire = true;
+                weaponCooldownTimer = 0.0f;
             }
+        }
+
+        if (Input.GetMouseButton(0) 
+            && canFire 
+            && equipedGearMain != null 
+            && GetComponent<StatsController>().isNotDead
+            && isLocalPlayer)
+        {
+            canFire = false;
+            CmdTellServerYouAreShooting();
         }
 	}
 

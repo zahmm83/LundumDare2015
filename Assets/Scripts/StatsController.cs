@@ -126,8 +126,11 @@ public class StatsController : NetworkBehaviour {
         SetHealthText();
         if(respawnTimer > respawnTime)
         {
-            CmdRespawnOnServer();
             CheckRespawnCondition();
+            if (isLocalPlayer)
+            {
+                CmdRespawnOnServer();
+            }
         }
     }
     
