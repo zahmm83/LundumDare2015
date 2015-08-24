@@ -10,8 +10,10 @@ public class ProjectileGrenade : ProjectileController
     void Awake()
     {
         speed = 8.0f;
-        relativeMidpoint = new Vector3(10.0f, 5.0f, 0.0f);
-        relativeEndpoint = new Vector3(20.0f, 3.75f, 0.0f);
+        //relativeMidpoint = new Vector3(10.0f, 5.0f, 0.0f);
+        //relativeEndpoint = new Vector3(20.0f, 3.75f, 0.0f);
+        relativeMidpoint = Vector3.zero;
+        relativeEndpoint = Vector3.zero;
         force = 500.0f;
     }
 
