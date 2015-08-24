@@ -115,15 +115,18 @@ public class EquipmentController : NetworkBehaviour {
         grip_attach.transform.rotation = grip.GetRotation();
         grip_attach.transform.position = grip.GetPosition();
 
-        var weaponIcon = GameObject.Find("WeaponIcon");
+        if (isLocalPlayer)
+        {
+            var weaponIcon = GameObject.Find("WeaponIcon");
 
-        if( gun_type != null)
-        {
-            weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("GunIcon");
-        }
-        else
-        {
-            weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("PillowIcon");
+            if (gun_type != null)
+            {
+                weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("GunIcon");
+            }
+            else
+            {
+                weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("PillowIcon");
+            }
         }
     }
 

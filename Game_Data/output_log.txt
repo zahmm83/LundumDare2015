@@ -2,38 +2,40 @@ Initialize engine version: 5.1.2f1 (afd2369b692a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 560  (ID=0x1201)
-    Vendor:   NVIDIA
-    VRAM:     1998 MB
+    Renderer: AMD Radeon R9 200 Series (ID=0x67b1)
+    Vendor:   ATI
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.052 seconds
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+desktop: 2560x1440 60Hz; virtual: 5120x1440 at -2560,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: 2648 -> priority: 1 
-  Thread -> id: 27a0 -> priority: 1 
-  Thread -> id: 994 -> priority: 1 
-  Thread -> id: 1210 -> priority: 1 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.925295 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 26b4 -> priority: 1 
-  Thread -> id: 1a58 -> priority: 1 
+IndexOutOfRangeException: Array index is out of range.
+  at UnityEngine.Display.RecreateDisplayList (System.IntPtr[] nativeDisplay) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1229.
-Total: 0.574454 ms (FindLiveObjects: 0.076593 ms CreateObjectMapping: 0.021925 ms MarkObjects: 0.425944 ms  DeleteObjects: 0.049406 ms)
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Michael\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 20f8 -> priority: 1 
+  Thread -> id: 10b4 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.780555 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 222c -> priority: 1 
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1507.
+Total: 0.348461 ms (FindLiveObjects: 0.031924 ms CreateObjectMapping: 0.019877 ms MarkObjects: 0.260216 ms  DeleteObjects: 0.036141 ms)
 
