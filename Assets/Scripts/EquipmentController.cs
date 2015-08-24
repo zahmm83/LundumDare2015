@@ -117,7 +117,7 @@ public class EquipmentController : NetworkBehaviour {
 
         if (isLocalPlayer)
         {
-            var weaponIcon = GameObject.Find("WeaponIcon");
+            GameObject weaponIcon = GameObject.Find("WeaponIcon");
 
             if (gun_type != null)
             {
