@@ -20,7 +20,7 @@ public class CharacterMovement : MonoBehaviour
     private float yPos;
     private Vector3 targetVelocity;
 
-    void Start()
+    void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();

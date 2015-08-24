@@ -6,7 +6,7 @@ public class WeaponCube : WeaponController {
     
 	void Start ()
     {
-        cooldown = 0.5f;
+
     }
 
 }

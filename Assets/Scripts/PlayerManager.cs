@@ -11,6 +11,7 @@ public class PlayerManager : NetworkBehaviour
     [SyncVar(hook = "NameChange")]
     public string playerName;
     public string playerCharacter;
+    public int numberOfPlayers = 0;
     private bool showDisconnectMenu = false;
 
 	void Start ()
@@ -48,6 +49,20 @@ public class PlayerManager : NetworkBehaviour
 
     void Update()
     {
+        if (isLocalPlayer)
+        {
+            GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
+            if (currentPlayers.Length != numberOfPlayers)
+            {
+                for (int i = 0; i < currentPlayers.Length; i++)
+                {
+                    GameObject currentPlayer = currentPlayers[i];
+                    currentPlayer.transform.FindChild("PlayerNameCanvas").GetComponent<PlayerNameLookAt>().targetPlayer = transform;
+                }
+                numberOfPlayers = currentPlayers.Length;
+            }
+        }
+
         if (Input.GetKeyDown("escape"))
         {
             showDisconnectMenu = !showDisconnectMenu;
@@ -77,11 +92,13 @@ public class PlayerManager : NetworkBehaviour
         transform.FindChild("PlayerNameCanvas").transform.FindChild("Text").GetComponent<Text>().text = name;
 
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 0; i < players.Length - 1; i++)
         {
             PlayerManager currentPlayer = players[i].GetComponent<PlayerManager>();
             string currentPlayerName = currentPlayer.playerName;
             players[i].transform.FindChild("PlayerNameCanvas").transform.FindChild("Text").GetComponent<Text>().text = currentPlayerName;
+
+            //players[i].transform.FindChild("PlayerNameCanvas").GetComponent<PlayerNameLookAt>().targetPlayer = transform;
         }
     }
 }

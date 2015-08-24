@@ -6,7 +6,7 @@ public class WeaponController : MonoBehaviour {
     public Vector3 positionOffSet = Vector3.zero;
     public GameObject projectile;
 
-    public float cooldown = 0.0f;
+    public float cooldown;
     
     public virtual void FireWeapon(GameObject shooter)
     {
