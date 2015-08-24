@@ -76,7 +76,7 @@ public class PlayerManager : NetworkBehaviour
         if (isLocalPlayer)
         {
             GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
-            if (currentPlayers.Length != numberOfPlayers && numberOfPlayers >= 1)
+            if (currentPlayers.Length != numberOfPlayers)
             {
                 for (int i = 0; i < currentPlayers.Length; i++)
                 {
