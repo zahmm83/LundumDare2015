@@ -18,7 +18,27 @@ public class PlayerManager : NetworkBehaviour
     public int numberOfPlayers = 0;
     private bool showDisconnectMenu = false;
 
-	void Start ()
+    public override void OnStartLocalPlayer()
+    {
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(0, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(1, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(2, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(3, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(4, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(5, true);
+    }
+
+    public override void PreStartClient()
+    {
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(0, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(1, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(2, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(3, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(4, true);
+        GetComponent<NetworkAnimator>().SetParameterAutoSend(5, true);
+    }
+
+    void Start ()
     {
         if (isLocalPlayer)
         {
