@@ -141,6 +141,6 @@ public class ProjectileController : NetworkBehaviour {
             if (marker.BoneType == "fire_spawn") { spawn_loc = marker; }
         }
 
-        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward*0.3f);
+        transform.position = spawn_loc.GetPosition() + (spawn_loc.gameObject.transform.forward * 0.6f);
     }
 }
