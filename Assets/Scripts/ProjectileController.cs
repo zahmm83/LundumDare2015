@@ -122,7 +122,7 @@ public class ProjectileController : MonoBehaviour {
     {
         firedFrom = shooter;
         startingPosition = firedFrom.transform.position;
-        direction = Camera.main.transform.forward;
+        direction = firedFrom.transform.forward;
 
         var marker_list = shooter.transform.root.GetComponentsInChildren<Marker>();
         Marker spawn_loc = null;

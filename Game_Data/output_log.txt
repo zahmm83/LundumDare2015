@@ -16,7 +16,7 @@ Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\U
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.030 seconds
+- Completed reload, in  0.064 seconds
 desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,23 +24,7 @@ desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 4244 -> priority: 1 
-  Thread -> id: 1b14 -> priority: 1 
-  Thread -> id: 50f0 -> priority: 1 
-  Thread -> id: 51c4 -> priority: 1 
-Log: cannot connect after 10 attempt address {::ffff:73.221.252.40:7777}
-UNet Client Disconnect Error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.515763 ms
-Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 838.
-Total: 0.515997 ms (FindLiveObjects: 0.045159 ms CreateObjectMapping: 0.032586 ms MarkObjects: 0.427988 ms  DeleteObjects: 0.009750 ms)
-
-Log: cannot connect after 10 attempt address {::ffff:73.221.252.40:7777}
+  Thread -> id: 265c -> priority: 1 
+  Thread -> id: 57b4 -> priority: 1 
+  Thread -> id: 19a0 -> priority: 1 
+  Thread -> id: 515c -> priority: 1 
