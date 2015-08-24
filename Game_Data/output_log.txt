@@ -16,7 +16,7 @@ Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\U
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+- Completed reload, in  0.040 seconds
 desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,95 +24,16 @@ desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 1d14 -> priority: 1 
-  Thread -> id: 4820 -> priority: 1 
-  Thread -> id: 4134 -> priority: 1 
-  Thread -> id: 4f74 -> priority: 1 
+  Thread -> id: 3220 -> priority: 1 
+  Thread -> id: 2ec4 -> priority: 1 
+  Thread -> id: 1e58 -> priority: 1 
+  Thread -> id: 3b10 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.132243 ms
+UnloadTime: 2.019088 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4e50 -> priority: 1 
-  Thread -> id: 4cb4 -> priority: 1 
+  Thread -> id: 22ec -> priority: 1 
+  Thread -> id: 2e78 -> priority: 1 
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1452.
-Total: 0.644034 ms (FindLiveObjects: 0.051060 ms CreateObjectMapping: 0.027454 ms MarkObjects: 0.520872 ms  DeleteObjects: 0.044389 ms)
-
-Initialize engine version: 5.1.2f1 (afd2369b692a)
-GfxDevice: creating device client; threaded=1
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD RADEON R9 M290X (ID=0x6810)
-    Vendor:   ATI
-    VRAM:     2022 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
-desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
-<RI> Initializing input.
-<RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: 19e4 -> priority: 1 
-  Thread -> id: 3a84 -> priority: 1 
-  Thread -> id: 2dfc -> priority: 1 
-  Thread -> id: 4274 -> priority: 1 
-HLAPI CRC channel count error local: 4 remote: 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump EquipmentController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump StatsController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump PlayerManager : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump CharacterId : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump EquipmentController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump StatsController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump PlayerManager : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump CharacterId : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump PickupPedestal : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.256431 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4f64 -> priority: 1 
-  Thread -> id: 27d8 -> priority: 1 
-
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 0.433889 ms (FindLiveObjects: 0.043619 ms CreateObjectMapping: 0.031303 ms MarkObjects: 0.299181 ms  DeleteObjects: 0.059528 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 1450.
+Total: 5.089672 ms (FindLiveObjects: 0.082877 ms CreateObjectMapping: 0.028737 ms MarkObjects: 4.929818 ms  DeleteObjects: 0.047981 ms)
 
