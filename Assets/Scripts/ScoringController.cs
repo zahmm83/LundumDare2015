@@ -11,7 +11,7 @@ public class ScoringController : NetworkBehaviour {
 
     [SyncVar(hook = "SetTimerText")]
     string timeLeft;
-    float timer = 20.0f;
+    float timer = 5.0f;
 
     Text scoreText;
     Text timeText;
