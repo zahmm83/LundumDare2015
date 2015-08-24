@@ -26,7 +26,11 @@ public class GameNetworkManager : NetworkManager
 
     public void SetPlayerName()
     {
-        playerName = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
+        string name = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
+        if (name == null || name == "")
+            playerName = "Player";
+        else
+            playerName = name;
     }
 
     public void SetCharacterSelection(Button button)
@@ -68,6 +72,7 @@ public class GameNetworkManager : NetworkManager
 
     void SetupMenuSceneButton()
     {
+        Debug.Log("Setting up menu buttons...");
         GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.AddListener(StartupHost);
 
@@ -77,11 +82,13 @@ public class GameNetworkManager : NetworkManager
         GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(SetPlayerName);
 
-        GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.RemoveAllListeners();
-        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
+        Button triceratot = GameObject.Find("Triceratot").GetComponent<Button>();
+        triceratot.onClick.RemoveAllListeners();
+        triceratot.onClick.AddListener(() => SetCharacterSelection(triceratot));
 
-        GameObject.Find("ButtonCharacter2").GetComponent<Button>().onClick.RemoveAllListeners();
-        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
+        Button squareBeast = GameObject.Find("Squarebeast").GetComponent<Button>();
+        squareBeast.onClick.RemoveAllListeners();
+        squareBeast.onClick.AddListener(() => SetCharacterSelection(squareBeast));
     }
 
     void SetupGameSceneButton()
