@@ -10,7 +10,8 @@ public class LavaParticleController : MonoBehaviour
     {
         if (lava.gameObject.tag.Equals("Lava"))
         {
-            Instantiate(lavaParticles, transform.position - offset, Quaternion.identity);
+            GameObject particles = Instantiate(lavaParticles, transform.position - offset, Quaternion.identity) as GameObject;
+            Destroy(particles, 3);
         }
     }
 }
