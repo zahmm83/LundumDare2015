@@ -21,7 +21,10 @@ public class PlayerRespawn : NetworkBehaviour {
         int randomIndex = Random.Range(0, spawnLocations.Length);
 
         transform.position = spawnLocations[randomIndex].transform.position;
-        transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = true;
+        if (isLocalPlayer)
+            transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
+        else
+            transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = true;
 
         PlayerManager manager = GetComponent<PlayerManager>();
         manager.ActivatePlayerRenderers(manager.playerCharacter);
