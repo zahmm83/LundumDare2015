@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 using ObjectMarkup;
+using UnityEngine.UI;
 
 public class EquipmentController : NetworkBehaviour {
 
@@ -10,6 +11,8 @@ public class EquipmentController : NetworkBehaviour {
 
     public GameObject equipedGearMain;
     public GameObject equipedGearSecondary;
+
+    public bool isInMenu = false;
 
     private float aim_timer = 0.0f;
 
@@ -46,7 +49,8 @@ public class EquipmentController : NetworkBehaviour {
             && canFire 
             && equipedGearMain != null 
             && GetComponent<StatsController>().isNotDead
-            && isLocalPlayer)
+            && isLocalPlayer
+            && !isInMenu)
             {
             canFire = false;
                 CmdTellServerYouAreShooting();
@@ -55,7 +59,6 @@ public class EquipmentController : NetworkBehaviour {
         if(aim_timer > 3) { anim.SetBool("shooting", false); }
         aim_timer += Time.deltaTime;
 
-        //Debug.Log(equipedGearMain);
         anim.SetBool("has_weapon", equipedGearMain.GetComponent<Marker>().BoneType == "gun");
 	}
 
@@ -88,18 +91,35 @@ public class EquipmentController : NetworkBehaviour {
             Destroy(equipedGearMain);
         }
 
-        var marker_list = transform.root.GetComponentsInChildren<Marker>();
-        Marker grip = null;
-        foreach(var marker in marker_list)
-        {
-            if(marker.BoneType == "right_grip") { grip = marker; }
-        }
-
-        Marker grip_attach = gear.GetComponentInChildren<Marker>();
+        Marker grip = GetMarker(transform.root, "right_grip");
+        Marker grip_attach = GetMarker(gear.transform.root, "grip_attach");
+        Marker gun_type = GetMarker(gear.transform.root, "gun");
 
         equipedGearMain = gear;
         equipedGearMain.transform.parent = grip.transform;
         grip_attach.transform.rotation = grip.GetRotation();
         grip_attach.transform.position = grip.GetPosition();
+
+        var weaponIcon = GameObject.Find("WeaponIcon");
+
+        if( gun_type != null)
+        {
+            weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("GunIcon");
+        }
+        else
+        {
+            weaponIcon.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>("PillowIcon");
+        }
+    }
+
+    Marker GetMarker(Transform root, string name)
+    {
+        var marker_list = root.GetComponentsInChildren<Marker>();
+        Marker return_marker = null;
+        foreach (var marker in marker_list)
+        {
+            if (marker.BoneType == name) { return_marker = marker; }
+        }
+        return return_marker;
     }
 }

@@ -85,22 +85,25 @@ public class PlayerManager : NetworkBehaviour
                 }
                 numberOfPlayers = currentPlayers.Length;
             }
-        }
 
-        if (Input.GetKeyDown("escape"))
-        {
-            showDisconnectMenu = !showDisconnectMenu;
-            GameObject disconnectButton = GameObject.Find("ButtonDisconnect");
+            if (Input.GetKeyDown("escape"))
+            {
+                showDisconnectMenu = !showDisconnectMenu;
+                GameObject disconnectButton = GameObject.Find("ButtonDisconnect");
 
-            if (showDisconnectMenu)
-                Cursor.lockState = CursorLockMode.None;
-            else
-                Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = showDisconnectMenu;
+                if (showDisconnectMenu)
+                    Cursor.lockState = CursorLockMode.None;
+                else
+                    Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = showDisconnectMenu;
 
-            disconnectButton.GetComponent<Image>().enabled = showDisconnectMenu;
-            disconnectButton.GetComponent<Button>().enabled = showDisconnectMenu;
-            disconnectButton.transform.FindChild("Text").GetComponent<Text>().enabled = showDisconnectMenu;
+                GetComponent<CharacterMovement>().enabled = !showDisconnectMenu;
+                GetComponent<EquipmentController>().isInMenu = showDisconnectMenu;
+
+                disconnectButton.GetComponent<Image>().enabled = showDisconnectMenu;
+                disconnectButton.GetComponent<Button>().enabled = showDisconnectMenu;
+                disconnectButton.transform.FindChild("Text").GetComponent<Text>().enabled = showDisconnectMenu;
+            }
         }
     }
 
