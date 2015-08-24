@@ -51,7 +51,7 @@ public class PlayerManager : NetworkBehaviour
                 if (playerCharacters.GetComponent<PlayerManager>().playerName.Equals(this.playerName))
                     playerNameCount++;
             }
-            if (playerNameCount > 0)
+            if (playerNameCount > 1)
             {
                 playerName = playerName + Random.Range(0, 200);
             }
@@ -87,7 +87,17 @@ public class PlayerManager : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
+            int playerNameCount = 0;
             GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject playerCharacters in currentPlayers)
+            {
+                if (playerCharacters.GetComponent<PlayerManager>().playerName.Equals(this.playerName))
+                    playerNameCount++;
+            }
+            if (playerNameCount > 1)
+            {
+                playerName = playerName + Random.Range(0, 200);
+            }
             if (currentPlayers.Length != numberOfPlayers)
             {
                 for (int i = 0; i < currentPlayers.Length; i++)
