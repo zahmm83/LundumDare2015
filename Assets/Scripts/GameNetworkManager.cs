@@ -46,10 +46,10 @@ public class GameNetworkManager : NetworkManager
 
     public void SetCharacterSelection(Button button)
     {
-        GameObject.Find("Triceratot").GetComponent<Image>().color = Color.white;
-        GameObject.Find("Squarebeast").GetComponent<Image>().color = Color.white;
+        GameObject.Find("Triceratot").GetComponent<Image>().color = Color.red;
+        GameObject.Find("Squarebeast").GetComponent<Image>().color = Color.red;
         
-        button.GetComponent<Image>().color = Color.red;
+        button.GetComponent<Image>().color = Color.white;
 
         if (button.name.Equals("Triceratot"))
             playerCharacter = "triceratops";
