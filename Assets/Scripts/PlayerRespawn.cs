@@ -21,13 +21,15 @@ public class PlayerRespawn : NetworkBehaviour {
         int randomIndex = Random.Range(0, spawnLocations.Length);
 
         transform.position = spawnLocations[randomIndex].transform.position;
-
         transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = true;
-        Renderer[] renderers = GetComponentsInChildren<Renderer>();
-        foreach (Renderer renderer in renderers)
-        {
-            renderer.enabled = true;
-        }
+
+        PlayerManager manager = GetComponent<PlayerManager>();
+        manager.ActivatePlayerRenderers(manager.playerCharacter);
+        //Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        //foreach (Renderer renderer in renderers)
+        //{
+        //    renderer.enabled = true;
+        //}
 
         playerHealthScript.isDead = false;
     }

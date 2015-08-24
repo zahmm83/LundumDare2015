@@ -127,7 +127,7 @@ public class PlayerManager : NetworkBehaviour
         playerCharacter = renderName;
     }
 
-    void ActivatePlayerRenderers(string renderName)
+    public void ActivatePlayerRenderers(string renderName)
     {
         playerCharacter = renderName;
         foreach(RenderName name in gameObject.transform.root.GetComponentsInChildren<RenderName>())
