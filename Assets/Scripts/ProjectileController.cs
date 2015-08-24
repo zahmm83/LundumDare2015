@@ -59,26 +59,20 @@ public class ProjectileController : NetworkBehaviour {
             playerStats.AddPlayerHitId(shooterId);
         }
 
-        HandleGettingHit hitHandler = target.gameObject.GetComponent<HandleGettingHit>();
-        if(hitHandler != null)
-        {
-            hitHandler.GetHit(force, transform.position - direction);
-            Destroy(gameObject);
-        }
 
         //EquipmentController shooter = GameObject.Find(shooterId).GetComponent<EquipmentController>();
 
 
-        //HandleCollision(target);
+        HandleCollision(target);
     }
 
 
-    public virtual void HandleCollision(Collider hit)
+    public virtual void HandleCollision(Collider target)
     {
-        Rigidbody target = hit.GetComponent<Rigidbody>();
-        if (target != null)
+        HandleGettingHit hitHandler = target.gameObject.GetComponent<HandleGettingHit>();
+        if (hitHandler != null)
         {
-            target.AddForce(direction * force, ForceMode.Impulse);
+            hitHandler.GetHit(force, transform.position - direction);
             Destroy(gameObject);
         }
     }
