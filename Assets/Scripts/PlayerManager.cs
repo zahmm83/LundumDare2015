@@ -76,7 +76,7 @@ public class PlayerManager : NetworkBehaviour
         if (isLocalPlayer)
         {
             GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
-            if (currentPlayers.Length != numberOfPlayers)
+            if (currentPlayers.Length != numberOfPlayers && numberOfPlayers >= 1)
             {
                 for (int i = 0; i < currentPlayers.Length; i++)
                 {
@@ -97,6 +97,9 @@ public class PlayerManager : NetworkBehaviour
             else
                 Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = showDisconnectMenu;
+
+            GetComponent<CharacterMovement>().enabled = !showDisconnectMenu;
+            GetComponent<EquipmentController>().isInMenu = showDisconnectMenu;
 
             disconnectButton.GetComponent<Image>().enabled = showDisconnectMenu;
             disconnectButton.GetComponent<Button>().enabled = showDisconnectMenu;
