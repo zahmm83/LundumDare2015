@@ -18,6 +18,15 @@ public class ProjectileController : NetworkBehaviour {
 
     protected GameObject firedFrom;
 
+
+    [SyncVar]
+    float dirx;
+    [SyncVar]
+    float diry;
+    [SyncVar]
+    float dirz;
+
+
     // Despawn variables
     public float lifeTime = 10.0f;
     float timer = 0.0f;
@@ -58,10 +67,6 @@ public class ProjectileController : NetworkBehaviour {
         {
             playerStats.AddPlayerHitId(shooterId);
         }
-
-
-        //EquipmentController shooter = GameObject.Find(shooterId).GetComponent<EquipmentController>();
-
 
         HandleCollision(target);
     }
@@ -126,7 +131,10 @@ public class ProjectileController : NetworkBehaviour {
         name = "Projectile " + Guid.NewGuid().ToString().Substring(0, 5);
         firedFrom = shooter;
         startingPosition = firedFrom.transform.position;
-        direction = firedFrom.transform.forward;
+        direction = shooter.transform.forward;
+        direction.y = 0;
+        
+        direction = Quaternion.AngleAxis(shooter.GetComponentInChildren<CharacterMovement>().shootAngle, shooter.transform.right) * direction;
 
         var marker_list = shooter.transform.root.GetComponentsInChildren<Marker>();
         Marker spawn_loc = null;

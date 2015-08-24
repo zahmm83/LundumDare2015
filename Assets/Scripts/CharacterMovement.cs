@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : NetworkBehaviour
 {
     public float moveForce = 50;
     public float speed = 5;
@@ -20,6 +21,10 @@ public class CharacterMovement : MonoBehaviour
     private float yPos;
     private Vector3 targetVelocity;
 
+
+    [SyncVar]
+    public float shootAngle;
+
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -28,9 +33,18 @@ public class CharacterMovement : MonoBehaviour
             anim.SetLayerWeight(1, 1);
     }
 
+    [Command]
+    void CmdReportShootAngle(float pos)
+    {
+        shootAngle = pos;
+    }
+
     void Update()
     {
         yPos = Mathf.Clamp(yPos - Input.GetAxis("Mouse Y") * sensitivity, -rotationClamp, rotationClamp);
+
+        CmdReportShootAngle(yPos);
+
         xPos = xPos + Input.GetAxis("Mouse X") * sensitivity;
 
         gameObject.transform.localRotation = Quaternion.AngleAxis(xPos, Vector3.up);

@@ -16,7 +16,7 @@ Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare
 Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  0.043 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -43,31 +43,35 @@ Loading C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_D
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 <RI> Initialized touch support.
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: 1e3c -> priority: 1 
-  Thread -> id: 21cc -> priority: 1 
-  Thread -> id: 1e6c -> priority: 1 
-  Thread -> id: b08 -> priority: 1 
+Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Matthew Zahm\Documents\GitHubVisualStudio\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 844 -> priority: 1 
-  Thread -> id: 758 -> priority: 1 
-  Thread -> id: 1ee4 -> priority: 1 
-  Thread -> id: 2140 -> priority: 1 
+  Thread -> id: 2444 -> priority: 1 
+  Thread -> id: 1cb4 -> priority: 1 
+  Thread -> id: 1e20 -> priority: 1 
+  Thread -> id: 24d0 -> priority: 1 
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 1b88 -> priority: 1 
+  Thread -> id: 2228 -> priority: 1 
+  Thread -> id: 554 -> priority: 1 
+  Thread -> id: 2728 -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.640260 ms
+UnloadTime: 3.776785 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 23d4 -> priority: 1 
-  Thread -> id: 25e8 -> priority: 1 
+  Thread -> id: 1248 -> priority: 1 
+  Thread -> id: 2534 -> priority: 1 
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1193.
-Total: 0.422728 ms (FindLiveObjects: 0.035081 ms CreateObjectMapping: 0.023972 ms MarkObjects: 0.320700 ms  DeleteObjects: 0.042682 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1227.
+Total: 0.497860 ms (FindLiveObjects: 0.040051 ms CreateObjectMapping: 0.029234 ms MarkObjects: 0.383262 ms  DeleteObjects: 0.044728 ms)
 
-HLAPI CRC channel count error local: 4 remote: 5
+HLAPI CRC channel count error local: 5 remote: 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump CharacterMovement : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -84,6 +88,10 @@ CRC Local Dump PlayerManager : 0
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 CRC Local Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump CharacterMovement : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
@@ -108,11 +116,11 @@ CRC Remote Dump PickupPedestal : 0
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.916817 ms
+UnloadTime: 4.029369 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 14e0 -> priority: 1 
-  Thread -> id: 22d8 -> priority: 1 
+  Thread -> id: 207c -> priority: 1 
+  Thread -> id: 17a0 -> priority: 1 
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 948.
-Total: 0.366014 ms (FindLiveObjects: 0.035081 ms CreateObjectMapping: 0.021633 ms MarkObjects: 0.265155 ms  DeleteObjects: 0.043559 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 982.
+Total: 0.394078 ms (FindLiveObjects: 0.039758 ms CreateObjectMapping: 0.023095 ms MarkObjects: 0.282696 ms  DeleteObjects: 0.047944 ms)
 
