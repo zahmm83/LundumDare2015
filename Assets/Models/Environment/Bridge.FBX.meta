@@ -6,10 +6,20 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box009
+    100004: GeoSphere001
     400000: //RootNode
+    400002: Box009
+    400004: GeoSphere001
     2300000: //RootNode
+    2300002: Box009
+    2300004: GeoSphere001
     3300000: //RootNode
+    3300002: Box009
+    3300004: GeoSphere001
     4300000: Box007
+    4300002: Box009
+    4300004: GeoSphere001
     9500000: //RootNode
   materials:
     importMaterials: 1
