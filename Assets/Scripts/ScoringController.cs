@@ -11,7 +11,7 @@ public class ScoringController : NetworkBehaviour {
 
     [SyncVar(hook = "SetTimerText")]
     string timeLeft;
-    float timer = 5.0f;
+    public float gameTimer = 300.0f;
 
     Text scoreText;
     Text timeText;
@@ -65,12 +65,12 @@ public class ScoringController : NetworkBehaviour {
 
     public string GenerateTimeText()
     {
-        timer -= Time.deltaTime;
-        int minutesLeft = (int)Mathf.Floor(timer / 60);
-        int secondsLeft = (int)Mathf.Floor(timer - minutesLeft * 60);
+        gameTimer -= Time.deltaTime;
+        int minutesLeft = (int)Mathf.Floor(gameTimer / 60);
+        int secondsLeft = (int)Mathf.Floor(gameTimer - minutesLeft * 60);
 
         string displayText = "99:99";
-        if (timer > 0)
+        if (gameTimer > 0)
         {
             displayText = minutesLeft.ToString() + ":" + (secondsLeft < 10 ? "0" + secondsLeft.ToString() : secondsLeft.ToString());
         }
