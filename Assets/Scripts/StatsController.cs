@@ -170,5 +170,5 @@ public class StatsController : NetworkBehaviour {
     {
         health = 100;
     }
-
+    
 }

@@ -18,6 +18,16 @@ public class EquipmentController : NetworkBehaviour {
 
     [SyncVar (hook = "Fire")]
     bool fireWeapon;
+    
+    //[SyncVar(hook = "HandleHit")]
+    //bool hitTarget;
+
+    //[SyncVar]
+    //string hitId;
+
+    //[SyncVar]
+    //string projectileId;
+
     bool canFire = true;
     
     Animator anim { get { return transform.root.GetComponent<CharacterMovement>().anim; } }
@@ -127,4 +137,47 @@ public class EquipmentController : NetworkBehaviour {
         }
         return return_marker;
     }
+
+
+
+
+    //public void InformShooterOfCollision(string projectile, string target)
+    //{
+    //    if (isLocalPlayer)
+    //    {
+    //        CmdInformServerOfCollision(projectile, target);
+    //    }
+    //}
+
+
+    //[Command]
+    //void CmdInformServerOfCollision(string projId, string targetId)
+    //{
+    //    hitId = targetId;
+    //    projectileId = projId;
+        
+    //    Invoke("UpdateHitTarget", 0.1f);
+
+    //    //hitTarget = !hitTarget;
+    //}
+    
+    //void UpdateHitTarget()
+    //{
+    //    hitTarget = !hitTarget;
+    //}
+
+    //void HandleHit(bool hit)
+    //{
+    //    GameObject projectile = GameObject.Find(projectileId);
+    //    GameObject target = GameObject.Find(hitId);
+
+    //    //Debug.Log(projectileId);
+    //    //Debug.Log(projectile);
+    //    //Debug.Log(target);
+
+    //    ProjectileController controller = projectile.GetComponent<ProjectileController>();
+    //    Collider targetCollider = target.GetComponent<Collider>();
+    //    controller.HandleCollision(targetCollider);
+    //}
+
 }

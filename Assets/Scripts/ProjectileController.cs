@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+using UnityEngine.Networking;
 using ObjectMarkup;
+using System;
 
-public class ProjectileController : MonoBehaviour {
+public class ProjectileController : NetworkBehaviour {
 
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
@@ -38,31 +39,39 @@ public class ProjectileController : MonoBehaviour {
         Move();
     }
 
-    void OnCollisionEnter(Collision hit)
+    //void OnCollisionEnter(Collision hit)
+    //{
+    //    StatsController playerStats = hit.gameObject.GetComponent<StatsController>();
+    //    if (playerStats != null)
+    //    {
+    //        playerStats.AddPlayerHitId(shooterId);
+    //    }
+
+    //    // Always handle collision, even if not hitting a player.
+    //    HandleCollision(hit.collider);
+    //}
+
+    void OnTriggerEnter(Collider target)
     {
-        StatsController playerStats = hit.gameObject.GetComponent<StatsController>();
+        StatsController playerStats = target.gameObject.GetComponent<StatsController>();
         if (playerStats != null)
         {
             playerStats.AddPlayerHitId(shooterId);
         }
 
-        // Always handle collision, even if not hitting a player.
-        HandleCollision(hit.collider);
+        HandleGettingHit hitHandler = target.gameObject.GetComponent<HandleGettingHit>();
+        if(hitHandler != null)
+        {
+            hitHandler.GetHit(force, transform.position - direction);
+            Destroy(gameObject);
+        }
+
+        //EquipmentController shooter = GameObject.Find(shooterId).GetComponent<EquipmentController>();
+
+
+        //HandleCollision(target);
     }
 
-    //void OnTriggerEnter(Collider target)
-    //{
-    //    if(target.tag == "Player")
-    //    {
-    //        StatsController playerStats = target.gameObject.GetComponent<StatsController>();
-    //        if (playerStats != null)
-    //        {
-    //            playerStats.AddPlayerHitId(shooterId);
-    //        }
-    //    }
-
-    //    HandleCollision(target);
-    //}
 
     public virtual void HandleCollision(Collider hit)
     {
@@ -120,6 +129,7 @@ public class ProjectileController : MonoBehaviour {
     // Default initialization, set the direction as weapon forward and position the same as the weapon.
     public virtual void Initialize(GameObject shooter)
     {
+        name = "Projectile " + Guid.NewGuid().ToString().Substring(0, 5);
         firedFrom = shooter;
         startingPosition = firedFrom.transform.position;
         direction = firedFrom.transform.forward;

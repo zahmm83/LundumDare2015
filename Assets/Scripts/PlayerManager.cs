@@ -135,6 +135,10 @@ public class PlayerManager : NetworkBehaviour
             if (playerCharacter == name.renderName)
             {
                 name.gameObject.GetComponent<Renderer>().enabled = true;
+                if (isLocalPlayer && name.GetComponent<NoRender_Player>() != null)
+                {
+                    name.gameObject.GetComponent<Renderer>().enabled = false;
+                }
             }
         }
 
