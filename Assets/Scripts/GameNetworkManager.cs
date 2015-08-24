@@ -31,14 +31,14 @@ public class GameNetworkManager : NetworkManager
 
     public void SetCharacterSelection(Button button)
     {
-        GameObject.Find("ButtonCharacter1").GetComponent<Image>().color = Color.white;
-        GameObject.Find("ButtonCharacter2").GetComponent<Image>().color = Color.white;
+        GameObject.Find("Triceratot").GetComponent<Image>().color = Color.white;
+        GameObject.Find("Squarebeast").GetComponent<Image>().color = Color.white;
+        
+        button.GetComponent<Image>().color = Color.red;
 
-        button.GetComponent<Image>().color = Color.magenta;
-
-        if (button.name.Equals("ButtonCharacter1"))
+        if (button.name.Equals("Triceratot"))
             playerCharacter = "triceratops";
-        if (button.name.Equals("ButtonCharacter2"))
+        if (button.name.Equals("Squarebeast"))
             playerCharacter = "monster";
     }
 
