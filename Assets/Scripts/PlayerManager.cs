@@ -44,9 +44,16 @@ public class PlayerManager : NetworkBehaviour
         {
             playerCharacter = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerCharacter;
             playerName = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerName;
-            if (GameObject.Find(playerName) != null)
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            int playerNameCount = 0;
+            foreach (GameObject player in players)
             {
-                playerName = "playerName" + Random.Range(0, 200);
+                if (player.GetComponent<PlayerManager>().playerName.Equals(this.playerName))
+                    playerNameCount++;
+            }
+            if (playerNameCount > 0)
+            {
+                playerName = playerName + Random.Range(0, 200);
             }
             transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
             CmdGiveServerPlayerName(playerName);
