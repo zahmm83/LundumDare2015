@@ -24,7 +24,7 @@ public class StatsController : NetworkBehaviour {
     float respawnTime = 10.0f;
     float respawnTimer = 0.0f;
 
-    float lavaImmunityDuration = 0.5f;
+    float lavaImmunityDuration = 2.0f;
     float lavaImmunityTimer = 0.0f;
     bool immuneToLava = false;
     int lavaDamage = 50;

@@ -7,26 +7,39 @@ public class GameNetworkManager : NetworkManager
 {
     public string playerName = "Player";
     public string playerCharacter = "triceratops";
-
+    
+    
     public void StartupHost()
     {
         SetPort();
+        NetworkManager.singleton.onlineScene = "MainGame";
         NetworkManager.singleton.StartHost();
     }
 
+    public void StartSingleplayer()
+    {
+        NetworkManager.singleton.onlineScene = "level0_greybox";
+        NetworkManager.singleton.StartHost();
+    }
+    
     public void JoinGame()
     {
         SetIPAddress();
         SetPort();
         if (NetworkManager.singleton.networkAddress.Length > 0)
         {
+            NetworkManager.singleton.onlineScene = "MainGame";
             NetworkManager.singleton.StartClient();
         }
     }
 
     public void SetPlayerName()
     {
-        playerName = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
+        string name = GameObject.Find("PlayerName").transform.FindChild("Text").GetComponent<Text>().text;
+        if (name == null || name == "")
+            playerName = "Player";
+        else
+            playerName = name;
     }
 
     public void SetCharacterSelection(Button button)
@@ -53,35 +66,10 @@ public class GameNetworkManager : NetworkManager
         NetworkManager.singleton.networkPort = 7777;
     }
 
-    void OnLevelWasLoaded (int level)
+    void OnLevelWasLoaded(int level)
     {
-        //Menu has to always has to have the index 0 in build settings
-        if (level == 0)
-        {
-            SetupMenuSceneButton();
-        }
-        else
-        {
+        if (level != 0)
             SetupGameSceneButton();
-        }
-    }
-
-    void SetupMenuSceneButton()
-    {
-        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.AddListener(StartupHost);
-
-        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.AddListener(JoinGame);
-
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(SetPlayerName);
-
-        GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.RemoveAllListeners();
-        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
-
-        GameObject.Find("ButtonCharacter2").GetComponent<Button>().onClick.RemoveAllListeners();
-        //GameObject.Find("ButtonCharacter1").GetComponent<Button>().onClick.AddListener(SetCharacterSelection);
     }
 
     void SetupGameSceneButton()
