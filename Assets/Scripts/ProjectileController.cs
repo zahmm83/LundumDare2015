@@ -8,8 +8,8 @@ public class ProjectileController : NetworkBehaviour {
 
     // Base movement variables
     protected Vector3 direction = Vector3.zero;
-    public float speed = 15.0f;
-    public float force = 10.0f;
+    public float speed;
+    public float force;
 
     // Trajectory control variables
     protected Vector3 startingPosition = Vector3.zero; // regular coordinates
@@ -28,7 +28,7 @@ public class ProjectileController : NetworkBehaviour {
 
 
     // Despawn variables
-    public float lifeTime = 10.0f;
+    public float lifeTime;
     float timer = 0.0f;
 
     public string shooterId = "";
@@ -46,6 +46,12 @@ public class ProjectileController : NetworkBehaviour {
     void Update()
     {
         Move();
+        AdditionalMotion();
+    }
+
+    public virtual void AdditionalMotion()
+    {
+
     }
 
     //void OnCollisionEnter(Collision hit)
