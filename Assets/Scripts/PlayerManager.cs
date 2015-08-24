@@ -45,6 +45,7 @@ public class PlayerManager : NetworkBehaviour
             playerCharacter = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerCharacter;
             playerName = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerName;
             transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
+            transform.FindChild("MainCamera").GetComponent<AudioSource>().enabled = true;
             CmdGiveServerPlayerName(playerName);
 
             Cursor.lockState = CursorLockMode.Locked;
