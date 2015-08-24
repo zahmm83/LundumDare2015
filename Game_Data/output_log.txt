@@ -16,84 +16,28 @@ Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\U
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
+- Completed reload, in  0.047 seconds
 desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+HDR and MultisampleAntiAliasing (in Forward Rendering Path) is not supported. This camera will render without HDR buffers. Disable Antialiasing in the Quality settings if you want to use HDR.
+ 
+(Filename:  Line: 2721)
+
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 4c44 -> priority: 1 
-  Thread -> id: 5010 -> priority: 1 
-  Thread -> id: 4fe4 -> priority: 1 
-  Thread -> id: 53ac -> priority: 1 
-HLAPI CRC channel count error local: 4 remote: 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump EquipmentController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump StatsController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump PlayerManager : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Local Dump CharacterId : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump CharacterId : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump StatsController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump PlayerManager : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump EquipmentController : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-CRC Remote Dump PickupPedestal : 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
+  Thread -> id: 49e0 -> priority: 1 
+  Thread -> id: 1f88 -> priority: 1 
+  Thread -> id: 2b20 -> priority: 1 
+  Thread -> id: 213c -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.186126 ms
+UnloadTime: 3.168344 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4bf4 -> priority: 1 
-  Thread -> id: 1284 -> priority: 1 
+  Thread -> id: e60 -> priority: 1 
+  Thread -> id: 4b54 -> priority: 1 
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1240.
-Total: 0.449284 ms (FindLiveObjects: 0.045929 ms CreateObjectMapping: 0.031816 ms MarkObjects: 0.333050 ms  DeleteObjects: 0.037974 ms)
-
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
-UNet Client Disconnect Error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.862391 ms
-Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: 4350 -> priority: 1 
-  Thread -> id: 4dd4 -> priority: 1 
-  Thread -> id: 3930 -> priority: 1 
-  Thread -> id: 37d8 -> priority: 1 
-
-Unloading 76 unused Assets to reduce memory usage. Loaded Objects now: 797.
-Total: 1.084339 ms (FindLiveObjects: 0.029250 ms CreateObjectMapping: 0.024375 ms MarkObjects: 0.451081 ms  DeleteObjects: 0.579374 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1377.
+Total: 1.654733 ms (FindLiveObjects: 0.057219 ms CreateObjectMapping: 0.040797 ms MarkObjects: 1.506682 ms  DeleteObjects: 0.049778 ms)
 
