@@ -46,9 +46,9 @@ public class PlayerManager : NetworkBehaviour
             playerName = GameObject.Find("NetworkManager").GetComponent<GameNetworkManager>().playerName;
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
             int playerNameCount = 0;
-            foreach (GameObject player in players)
+            foreach (GameObject playerCharacters in players)
             {
-                if (player.GetComponent<PlayerManager>().playerName.Equals(this.playerName))
+                if (playerCharacters.GetComponent<PlayerManager>().playerName.Equals(this.playerName))
                     playerNameCount++;
             }
             if (playerNameCount > 0)
