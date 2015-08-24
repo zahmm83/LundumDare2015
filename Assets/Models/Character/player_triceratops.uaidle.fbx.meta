@@ -71,6 +71,10 @@ ModelImporter:
     100126: b_finger04_top_r
     100128: demon
     100130: triceratops
+    100132: demon_body
+    100134: demon_head
+    100136: dino_body
+    100138: dino_head
     400000: b_ankle_l
     400002: b_ankle_r
     400004: b_armL_l
@@ -137,14 +141,26 @@ ModelImporter:
     400126: b_finger04_top_r
     400128: demon
     400130: triceratops
+    400132: demon_body
+    400134: demon_head
+    400136: dino_body
+    400138: dino_head
     4300000: char01_0
     4300002: triceratops
     4300004: demon
+    4300006: dino_body
+    4300008: dino_head
+    4300010: demon_body
+    4300012: demon_head
     7400000: ua_idle
     9500000: //RootNode
     13700000: char01_0
     13700002: demon
     13700004: triceratops
+    13700006: demon_body
+    13700008: demon_head
+    13700010: dino_body
+    13700012: dino_head
   materials:
     importMaterials: 1
     materialName: 0

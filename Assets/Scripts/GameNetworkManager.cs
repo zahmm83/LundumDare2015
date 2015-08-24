@@ -19,7 +19,7 @@ public class GameNetworkManager : NetworkManager
 
     public void StartSingleplayer()
     {
-        NetworkManager.singleton.onlineScene = "level0_greybox";
+        NetworkManager.singleton.onlineScene = "Testbed";
         NetworkManager.singleton.StartHost();
     }
     
