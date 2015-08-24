@@ -16,7 +16,7 @@ Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\U
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.045 seconds
+- Completed reload, in  0.049 seconds
 desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -24,16 +24,120 @@ desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 3a10 -> priority: 1 
-  Thread -> id: 4314 -> priority: 1 
-  Thread -> id: 3790 -> priority: 1 
-  Thread -> id: 27d0 -> priority: 1 
+  Thread -> id: 1eac -> priority: 1 
+  Thread -> id: 2998 -> priority: 1 
+  Thread -> id: b50 -> priority: 1 
+  Thread -> id: 434 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.205114 ms
+UnloadTime: 3.919632 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 8ec -> priority: 1 
-  Thread -> id: 4bf0 -> priority: 1 
+  Thread -> id: dc0 -> priority: 1 
+  Thread -> id: 1c28 -> priority: 1 
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1503.
-Total: 0.488542 ms (FindLiveObjects: 0.053370 ms CreateObjectMapping: 0.027198 ms MarkObjects: 0.363328 ms  DeleteObjects: 0.044133 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1515.
+Total: 0.528827 ms (FindLiveObjects: 0.048238 ms CreateObjectMapping: 0.031303 ms MarkObjects: 0.372308 ms  DeleteObjects: 0.076719 ms)
 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.068687 ms
+Multiple NetworkManagers detected in the scene. Only one NetworkManager can exist at a time. The duplicate NetworkManager will not be used.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2f6c -> priority: 1 
+  Thread -> id: 1ebc -> priority: 1 
+  Thread -> id: 1448 -> priority: 1 
+  Thread -> id: 4838 -> priority: 1 
+
+Unloading 108 unused Assets to reduce memory usage. Loaded Objects now: 839.
+Total: 0.866239 ms (FindLiveObjects: 0.049264 ms CreateObjectMapping: 0.038488 ms MarkObjects: 0.426192 ms  DeleteObjects: 0.351781 ms)
+
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD RADEON R9 M290X (ID=0x6810)
+    Vendor:   ATI
+    VRAM:     2022 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.032 seconds
+desktop: 2560x1440 60Hz; virtual: 4480x1440 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\zahmm83\Documents\LundumDare2015\Game_Data\Managed\System.dll (this message is harmless)
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 15f0 -> priority: 1 
+  Thread -> id: 31cc -> priority: 1 
+  Thread -> id: 4454 -> priority: 1 
+  Thread -> id: 2b14 -> priority: 1 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.535754 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2a08 -> priority: 1 
+  Thread -> id: 34b0 -> priority: 1 
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1491.
+Total: 0.517280 ms (FindLiveObjects: 0.049521 ms CreateObjectMapping: 0.040027 ms MarkObjects: 0.378210 ms  DeleteObjects: 0.048751 ms)
+
+HLAPI CRC channel count error local: 4 remote: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Local Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump EquipmentController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump StatsController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PlayerManager : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump CharacterId : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+CRC Remote Dump PickupPedestal : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.187922 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4044 -> priority: 1 
+  Thread -> id: 5524 -> priority: 1 
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 1178.
+Total: 0.448258 ms (FindLiveObjects: 0.062350 ms CreateObjectMapping: 0.033356 ms MarkObjects: 0.306365 ms  DeleteObjects: 0.045929 ms)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}

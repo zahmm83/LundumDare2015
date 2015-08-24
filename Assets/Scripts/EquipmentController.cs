@@ -28,10 +28,15 @@ public class EquipmentController : NetworkBehaviour {
     void Awake () {
 	    if(startingGearMain != null)
         {
-            GameObject instantiatedGear = Instantiate(startingGearMain);
-            PickupGear(instantiatedGear);
+            ResetGear();
         }
 	}
+
+    public void ResetGear()
+    {
+        GameObject instantiatedGear = Instantiate(startingGearMain);
+        PickupGear(instantiatedGear);
+    }
 	
 	void Update () {
         if (!canFire)

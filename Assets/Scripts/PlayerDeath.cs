@@ -18,6 +18,7 @@ public class PlayerDeath : NetworkBehaviour {
 	
     void DisablePlayer()
     {
+        GetComponent<EquipmentController>().ResetGear();
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
         transform.FindChild("PlayerNameCanvas").GetComponent<Canvas>().enabled = false;
         foreach (Renderer renderer in renderers)
