@@ -11,11 +11,12 @@ public class ScoringController : NetworkBehaviour {
 
     [SyncVar(hook = "SetTimerText")]
     string timeLeft;
-    public float gameTimer = 300.0f;
+    public float gameTimer = 5.0f;
 
     Text scoreText;
     Text timeText;
 
+    public AudioClip gameOverAudio;
     bool GameIsOver = false;
 
     void Awake()
@@ -77,6 +78,8 @@ public class ScoringController : NetworkBehaviour {
         else
         {
             GameIsOver = true;
+            Camera.main.GetComponent<AudioSource>().clip = gameOverAudio;
+            Camera.main.GetComponent<AudioSource>().Play();
             displayText = "The winner is...\n";
             string topPlayer = "";
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
