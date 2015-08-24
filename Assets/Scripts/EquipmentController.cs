@@ -55,7 +55,8 @@ public class EquipmentController : NetworkBehaviour {
         if(aim_timer > 3) { anim.SetBool("shooting", false); }
         aim_timer += Time.deltaTime;
 
-        anim.SetBool("has_weapon", equipedGearMain != null);
+        Debug.Log(equipedGearMain);
+        anim.SetBool("has_weapon", equipedGearMain.GetComponent<Marker>().BoneType == "gun");
 	}
 
     [Command]

@@ -12,6 +12,7 @@ public class GameNetworkManager : NetworkManager
     public void StartupHost()
     {
         SetPort();
+        NetworkManager.singleton.onlineScene = "MainGame";
         NetworkManager.singleton.StartHost();
     }
 
@@ -27,6 +28,7 @@ public class GameNetworkManager : NetworkManager
         SetPort();
         if (NetworkManager.singleton.networkAddress.Length > 0)
         {
+            NetworkManager.singleton.onlineScene = "MainGame";
             NetworkManager.singleton.StartClient();
         }
     }
@@ -64,40 +66,10 @@ public class GameNetworkManager : NetworkManager
         NetworkManager.singleton.networkPort = 7777;
     }
 
-    void OnLevelWasLoaded (int level)
+    void OnLevelWasLoaded(int level)
     {
-        //Menu has to always have the index 0 in build settings
-        if (level == 0)
-        {
-            SetupMenuSceneButton();
-        }
-        else
-        {
+        if (level != 0)
             SetupGameSceneButton();
-        }
-    }
-
-    void SetupMenuSceneButton()
-    {
-        GameObject.Find("ButtonSingleplayer").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonSingleplayer").GetComponent<Button>().onClick.AddListener(StartSingleplayer);
-
-        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.AddListener(StartupHost);
-
-        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.AddListener(JoinGame);
-
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(SetPlayerName);
-
-        Button triceratot = GameObject.Find("Triceratot").GetComponent<Button>();
-        triceratot.onClick.RemoveAllListeners();
-        triceratot.onClick.AddListener(() => SetCharacterSelection(triceratot));
-
-        Button squareBeast = GameObject.Find("Squarebeast").GetComponent<Button>();
-        squareBeast.onClick.RemoveAllListeners();
-        squareBeast.onClick.AddListener(() => SetCharacterSelection(squareBeast));
     }
 
     void SetupGameSceneButton()
