@@ -7,8 +7,8 @@ public class GameNetworkManager : NetworkManager
 {
     public string playerName = "Player";
     public string playerCharacter = "triceratops";
-    
-    
+
+
     public void StartupHost()
     {
         SetPort();
