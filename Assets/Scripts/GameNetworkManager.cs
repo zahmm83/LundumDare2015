@@ -7,13 +7,20 @@ public class GameNetworkManager : NetworkManager
 {
     public string playerName = "Player";
     public string playerCharacter = "triceratops";
-
+    
+    
     public void StartupHost()
     {
         SetPort();
         NetworkManager.singleton.StartHost();
     }
 
+    public void StartSingleplayer()
+    {
+        NetworkManager.singleton.onlineScene = "level0_greybox";
+        NetworkManager.singleton.StartHost();
+    }
+    
     public void JoinGame()
     {
         SetIPAddress();
@@ -59,7 +66,7 @@ public class GameNetworkManager : NetworkManager
 
     void OnLevelWasLoaded (int level)
     {
-        //Menu has to always has to have the index 0 in build settings
+        //Menu has to always have the index 0 in build settings
         if (level == 0)
         {
             SetupMenuSceneButton();
@@ -72,7 +79,9 @@ public class GameNetworkManager : NetworkManager
 
     void SetupMenuSceneButton()
     {
-        Debug.Log("Setting up menu buttons...");
+        GameObject.Find("ButtonSingleplayer").GetComponent<Button>().onClick.RemoveAllListeners();
+        GameObject.Find("ButtonSingleplayer").GetComponent<Button>().onClick.AddListener(StartSingleplayer);
+
         GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.AddListener(StartupHost);
 
