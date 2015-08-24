@@ -16,7 +16,7 @@ public class ProjectileGrenade : ProjectileController
     }
 
 
-    public override void HandleCollision(Collision hit)
+    public override void HandleCollision(Collider hit)
     {
         List<Collider> targetColliders = Physics.OverlapSphere(transform.position, blastRadius).ToList();
         foreach(Collider collider in targetColliders)

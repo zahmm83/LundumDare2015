@@ -14,7 +14,7 @@ public class ProjectileSphere : ProjectileController
     }
 
 
-    public override void HandleCollision(Collision hit)
+    public override void HandleCollision(Collider hit)
     {
         GameObject blackHole = Instantiate(this.blackHole);
         blackHole.transform.position = transform.position + new Vector3(0.0f, 1.5f, 0.0f);
