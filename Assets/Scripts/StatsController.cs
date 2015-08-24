@@ -100,7 +100,10 @@ public class StatsController : NetworkBehaviour {
                         float scorePercentage = numberOfHits / numberOfHitters;
                         int scoreChange = (int)Mathf.Ceil(scorePercentage * 100);
                         GameObject player = GameObject.Find(hitter);
-                        player.GetComponent<StatsController>().playerScore += scoreChange;
+                        if(player.GetComponent<StatsController>() != null)
+                        {
+                            player.GetComponent<StatsController>().playerScore += scoreChange;
+                        }
                     }
                 }
                 EventDie();
