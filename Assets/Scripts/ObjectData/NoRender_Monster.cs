@@ -16,6 +16,7 @@ namespace ObjectMarkup
             if (manager != null)
             {
                 doRenderName = manager.playerCharacter;
+                manager.ReportRenderNameToManager(doRenderName);
             }
 
             if(doRenderName != gameObject.GetComponent<RenderName>().renderName)

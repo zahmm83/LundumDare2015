@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
+using ObjectMarkup;
 
 public class PlayerManager : NetworkBehaviour
 {
@@ -10,7 +11,10 @@ public class PlayerManager : NetworkBehaviour
     public bool isLocal = false;
     [SyncVar(hook = "NameChange")]
     public string playerName;
+
+    [SyncVar (hook = "ActivatePlayerRenderers")]
     public string playerCharacter;
+
     public int numberOfPlayers = 0;
     private bool showDisconnectMenu = false;
 
@@ -84,6 +88,33 @@ public class PlayerManager : NetworkBehaviour
     void CmdGiveServerPlayerName(string name)
     {
         playerName = name;
+    }
+
+    public void ReportRenderNameToManager(string renderName)
+    {
+        if (isLocalPlayer)
+        {
+            CmdReportRenderNameToServer(renderName);
+        }
+    }
+
+    [Command]
+    void CmdReportRenderNameToServer(string renderName)
+    {
+        playerCharacter = renderName;
+    }
+
+    void ActivatePlayerRenderers(string renderName)
+    {
+        playerCharacter = renderName;
+        foreach(RenderName name in gameObject.transform.root.GetComponentsInChildren<RenderName>())
+        {
+            if (playerCharacter == name.renderName)
+            {
+                name.gameObject.GetComponent<Renderer>().enabled = true;
+            }
+        }
+
     }
 
     void NameChange(string name)
