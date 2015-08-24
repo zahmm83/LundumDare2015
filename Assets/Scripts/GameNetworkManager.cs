@@ -13,6 +13,7 @@ public class GameNetworkManager : NetworkManager
     {
         SetPort();
         NetworkManager.singleton.onlineScene = "MainGame";
+        SetPlayerName();
         NetworkManager.singleton.StartHost();
     }
 
@@ -28,6 +29,7 @@ public class GameNetworkManager : NetworkManager
         SetPort();
         if (NetworkManager.singleton.networkAddress.Length > 0)
         {
+            SetPlayerName();
             NetworkManager.singleton.onlineScene = "MainGame";
             NetworkManager.singleton.StartClient();
         }

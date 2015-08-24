@@ -12,6 +12,8 @@ public class EquipmentController : NetworkBehaviour {
     public GameObject equipedGearMain;
     public GameObject equipedGearSecondary;
 
+    public bool isInMenu = false;
+
     private float aim_timer = 0.0f;
 
     [SyncVar (hook = "Fire")]
@@ -47,7 +49,8 @@ public class EquipmentController : NetworkBehaviour {
             && canFire 
             && equipedGearMain != null 
             && GetComponent<StatsController>().isNotDead
-            && isLocalPlayer)
+            && isLocalPlayer
+            && !isInMenu)
             {
             canFire = false;
                 CmdTellServerYouAreShooting();

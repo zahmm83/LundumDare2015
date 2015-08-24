@@ -24,9 +24,6 @@ public class MenuButtons : MonoBehaviour
         GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.RemoveAllListeners();
         GameObject.Find("ButtonJoinGame").GetComponent<Button>().onClick.AddListener(networkManager.JoinGame);
 
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.RemoveAllListeners();
-        GameObject.Find("ButtonPlayerName").GetComponent<Button>().onClick.AddListener(networkManager.SetPlayerName);
-
         Button triceratot = GameObject.Find("Triceratot").GetComponent<Button>();
         triceratot.onClick.RemoveAllListeners();
         triceratot.onClick.AddListener(() => networkManager.SetCharacterSelection(triceratot));
